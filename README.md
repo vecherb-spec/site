@@ -10,15 +10,28 @@
 - **О компании** — информация о MediaLife
 - **Контакты** — форма заявки и контактные данные
 
-## Запуск
+## Запуск локально
 
-Откройте `index.html` в браузере или запустите локальный сервер:
+Откройте `index.html` в браузере **не получится** — стили и скрипты не загрузятся. Нужен локальный сервер:
 
 ```bash
+cd site
 python3 -m http.server 8080
 ```
 
-Сайт будет доступен по адресу http://localhost:8080
+Откройте http://localhost:8080
+
+## Публикация в интернете (GitHub Pages)
+
+1. Откройте репозиторий: https://github.com/vecherb-spec/site
+2. **Settings** → **Pages**
+3. **Build and deployment** → Source: **Deploy from a branch**
+4. Branch: **main**, папка: **/ (root)**
+5. Нажмите **Save**
+
+Через 1–2 минуты сайт будет доступен по адресу:
+
+**https://vecherb-spec.github.io/site/**
 
 ## Технологии
 
