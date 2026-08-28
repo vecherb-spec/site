@@ -3,307 +3,274 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MediaLive — техническое обеспечение мероприятий: звук, свет, LED-экраны, видео, сценические конструкции и прямые трансляции.">
-  <meta name="theme-color" content="#09090b">
-  <meta property="og:title" content="MediaLive — техническая поддержка мероприятий">
-  <meta property="og:description" content="Звук, свет, видео, LED-экраны и сцены под ключ. Собственный парк техники, работаем по всей России.">
+  <title>Medialive — Техническое обеспечение мероприятий</title>
+  <meta name="description" content="Medialive — профессиональная аренда звукового, светового и видеооборудования. Светодиодные экраны, сценические конструкции, прямые трансляции.">
+  <meta name="author" content="Medialive">
+  <meta name="theme-color" content="#08090f">
+  <link rel="canonical" href="https://rent.medialive.ru/">
+  <meta property="og:title" content="Medialive — Техническое обеспечение мероприятий">
+  <meta property="og:description" content="Аренда профессионального оборудования и полное техническое сопровождение мероприятий любого масштаба.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
-  <title>MediaLive — техническая поддержка мероприятий</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:url" content="https://rent.medialive.ru/">
+  <link rel="icon" href="img/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">К содержанию</a>
-
   <header class="header" id="header">
-    <div class="container header__inner">
-      <a class="logo" href="#top">
-        <span class="logo__mark" aria-hidden="true">ML</span>
-        <span class="logo__text">MediaLive</span>
+    <div class="wrap header__bar">
+      <a class="logo" href="#top" aria-label="Medialive">
+        <img src="img/logo.png" alt="Medialive">
       </a>
-      <nav class="nav" id="nav" aria-label="Основная навигация">
-        <a class="nav__link" href="#services">Услуги</a>
-        <a class="nav__link" href="#equipment">Оборудование</a>
-        <a class="nav__link" href="#about">О компании</a>
-        <a class="nav__link" href="#contact">Контакты</a>
+      <nav class="nav" id="nav">
+        <a href="#services">Услуги</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#contact">Контакты</a>
       </nav>
-      <a class="header__phone" href="tel:+78001234567">+7 (800) 123-45-67</a>
-      <a class="btn btn--gold header__cta" href="#contact">Оставить заявку</a>
-      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
-        <span></span>
-        <span></span>
-        <span></span>
+      <a class="btn btn--cyan header__cta" href="#contact">Связаться</a>
+      <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
+    </div>
+    <div class="nav-mobile" id="navMobile" hidden>
+      <div class="wrap">
+        <a href="#services">Услуги</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#contact">Контакты</a>
+        <a class="btn btn--cyan" href="#contact">Связаться</a>
+      </div>
     </div>
   </header>
 
-  <main id="main">
+  <main>
     <section class="hero" id="top">
-      <div class="hero__glow" aria-hidden="true"></div>
-      <div class="container hero__inner">
-        <p class="eyebrow">Техническое обеспечение мероприятий</p>
-        <h1 class="hero__title">Сцена, звук и картинка,<br>которые не подводят</h1>
-        <p class="hero__lead">
-          MediaLive собирает технический продакшн под ключ: от камерной презентации
-          до фестивальной площадки. Свой парк оборудования, инженеры на площадке,
-          монтаж и сопровождение шоу.
-        </p>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--cyan" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--orange" aria-hidden="true"></div>
+      <div class="hero__scan" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--3" aria-hidden="true"></div>
+      <div class="corner corner--tl" aria-hidden="true"></div>
+      <div class="corner corner--br" aria-hidden="true"></div>
+      <div class="wrap hero__inner">
+        <p class="pill pill--cyan"><i></i>Профессиональное техническое обеспечение мероприятий</p>
+        <h1 class="hero__title">
+          <span>ЗВУК. СВЕТ.</span>
+          <span class="is-cyan glow-cyan">ВИДЕО.</span>
+          <span>СЦЕНА.</span>
+        </h1>
+        <p class="hero__lead">Аренда профессионального оборудования и полное техническое сопровождение мероприятий любого масштаба — от корпоратива до масштабного концерта.</p>
         <div class="hero__actions">
-          <a class="btn btn--gold btn--lg" href="#contact">Обсудить проект</a>
-          <a class="btn btn--ghost btn--lg" href="#services">Смотреть услуги</a>
+          <a class="btn btn--cyan btn--lg" href="#catalog">Каталог оборудования <span aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost btn--lg" href="#contact"><span class="dot-orange" aria-hidden="true"></span>Получить КП</a>
         </div>
-        <ul class="hero__facts">
-          <li>
-            <strong>Свой парк</strong>
-            <span>звук, свет, LED, сцена</span>
-          </li>
-          <li>
-            <strong>Под ключ</strong>
-            <span>проект, монтаж, сопровождение</span>
-          </li>
-          <li>
-            <strong>По России</strong>
-            <span>выезд на площадку 24/7</span>
-          </li>
+        <ul class="hero__stats">
+          <li><strong>500+</strong><span>Мероприятий</span></li>
+          <li><strong>10 лет</strong><span>На рынке</span></li>
+          <li><strong>300+</strong><span>Единиц техники</span></li>
+          <li><strong>24/7</strong><span>Поддержка</span></li>
         </ul>
       </div>
     </section>
 
-    <section class="section services" id="services">
-      <div class="container">
-        <header class="section__head">
-          <p class="eyebrow">Услуги</p>
-          <h2 class="section__title">Полный технический цикл на площадке</h2>
-          <p class="section__desc">Четыре направления, которые закрывают шоу без субподрядной лотереи.</p>
-        </header>
-        <div class="services__grid">
-          <article class="card">
-            <span class="card__index">01</span>
-            <h3>Звук</h3>
-            <p>Линейные массивы, пульты, микрофоны, бэклайн и мониторные системы. Настройка акустики зала и работа звукорежиссёра.</p>
-            <ul>
-              <li>Концертный звук</li>
-              <li>Речь и конференции</li>
-              <li>In-ear и сценический мониторинг</li>
-            </ul>
+    <section class="section section--dark" id="services">
+      <div class="wrap">
+        <p class="pill pill--cyan"><i></i>Наши услуги</p>
+        <h2 class="h-display">ЧТО МЫ <span class="is-cyan">ДЕЛАЕМ</span></h2>
+        <p class="lead">Полный спектр технического обеспечения — от аренды одного микрофона до комплексной организации трансляции на многотысячную аудиторию.</p>
+        <div class="services">
+          <article class="card card--cyan">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.08"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+            </div>
+            <h3>ЗВУКОВОЕ ОБОРУДОВАНИЕ</h3>
+            <p>Профессиональные акустические системы, микрофоны, микшерные пульты и мониторинг для мероприятий любого масштаба.</p>
+            <div class="tags"><span>Line Array</span><span>Микрофоны</span><span>Пульты</span><span>Мониторы</span></div>
           </article>
-          <article class="card">
-            <span class="card__index">02</span>
-            <h3>Свет</h3>
-            <p>Приборы, консоли, эффекты и программирование шоу. Свет, который держит атмосферу и не слепит камеры.</p>
-            <ul>
-              <li>Световые головы и LED</li>
-              <li>Пульты GrandMA и ChamSys</li>
-              <li>Дым, лазер, спецэффекты</li>
-            </ul>
+          <article class="card card--orange">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 1 4 12.7V17H8v-2.3A7 7 0 0 1 12 2z"/></svg>
+            </div>
+            <h3>СВЕТОВОЕ ОБОРУДОВАНИЕ</h3>
+            <p>Moving Head прожекторы, LED панели, дымогенераторы и системы управления светом для создания незабываемой атмосферы.</p>
+            <div class="tags"><span>Moving Head</span><span>LED Wash</span><span>Стробы</span><span>DMX</span></div>
           </article>
-          <article class="card">
-            <span class="card__index">03</span>
-            <h3>Видео и LED</h3>
-            <p>Экраны, проекция, камеры, видеосерверы и прямые трансляции. Картинка для зала и для эфира.</p>
-            <ul>
-              <li>LED-экраны indoor / outdoor</li>
-              <li>Многокамерная съёмка</li>
-              <li>Стриминг YouTube, VK, Telegram</li>
-            </ul>
+          <article class="card card--cyan">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-3v10l-6-3"/><circle cx="9" cy="12" r="2.2"/></svg>
+            </div>
+            <h3>ВИДЕООБОРУДОВАНИЕ</h3>
+            <p>Профессиональные видеокамеры, проекторы, видеомикшеры и оборудование для многокамерной съёмки.</p>
+            <div class="tags"><span>Камеры</span><span>Проекторы</span><span>Switcher</span><span>Мониторинг</span></div>
           </article>
-          <article class="card">
-            <span class="card__index">04</span>
-            <h3>Сцены</h3>
-            <p>Фермы, подиумы, крыши, лебёдки и декорации. Считаем нагрузки и монтируем конструкции под регламент площадки.</p>
-            <ul>
-              <li>Сценические подиумы</li>
-              <li>Ферменные конструкции</li>
-              <li>Подъём и механика</li>
-            </ul>
+          <article class="card card--orange">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8"/><path d="M12 18v4"/></svg>
+            </div>
+            <h3>СВЕТОДИОДНЫЕ ЭКРАНЫ</h3>
+            <p>Аренда LED-экранов с высоким разрешением для интерьера и экстерьера. Пиксельный шаг от 2 до 10 мм.</p>
+            <div class="tags"><span>Indoor P2</span><span>Outdoor P4</span><span>Curved LED</span><span>Контент</span></div>
+          </article>
+          <article class="card card--cyan">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18"/><path d="M5 21V11l7-6 7 6v10"/><path d="M10 21v-6h4v6"/></svg>
+            </div>
+            <h3>СЦЕНИЧЕСКИЕ КОНСТРУКЦИИ</h3>
+            <p>Ферменные системы, подиумы, rig-подъёмники и сценические риги для монтажа оборудования на высоте.</p>
+            <div class="tags"><span>Фермы</span><span>Подиумы</span><span>Риги</span><span>Ограждения</span></div>
+          </article>
+          <article class="card card--orange">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+            </div>
+            <h3>ПРЯМЫЕ ТРАНСЛЯЦИИ</h3>
+            <p>Организация онлайн-трансляций «под ключ»: многокамерное производство, стриминг на любые платформы.</p>
+            <div class="tags"><span>YouTube</span><span>VK Live</span><span>Zoom</span><span>Собственные CDN</span></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section equipment" id="equipment">
-      <div class="container">
-        <header class="section__head">
-          <p class="eyebrow">Оборудование</p>
-          <h2 class="section__title">Парк техники, с которым можно выходить в зал</h2>
-          <p class="section__desc">Работаем с проверенными брендами. Аренда отдельно или в составе полного технического сопровождения.</p>
-        </header>
-        <div class="tabs" role="tablist" aria-label="Категории оборудования">
-          <button class="tabs__btn is-active" type="button" role="tab" id="tab-sound" aria-selected="true" aria-controls="panel-sound" data-tab="sound">Звуковое</button>
-          <button class="tabs__btn" type="button" role="tab" id="tab-light" aria-selected="false" aria-controls="panel-light" data-tab="light">Световое</button>
-          <button class="tabs__btn" type="button" role="tab" id="tab-video" aria-selected="false" aria-controls="panel-video" data-tab="video">Видео</button>
-          <button class="tabs__btn" type="button" role="tab" id="tab-stage" aria-selected="false" aria-controls="panel-stage" data-tab="stage">Сценическое</button>
+    <section class="section section--alt" id="catalog">
+      <div class="wrap">
+        <p class="pill pill--orange"><i></i>Каталог</p>
+        <h2 class="h-display">НАШЕ <span class="is-orange">ОБОРУДОВАНИЕ</span></h2>
+        <p class="lead">Профессиональный парк техники ведущих мировых брендов. Всё оборудование регулярно проходит техническое обслуживание.</p>
+        <div class="tabs" role="tablist" aria-label="Категории каталога">
+          <button type="button" class="is-active" role="tab" aria-selected="true" data-tab="sound">Звук</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="light">Свет</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="video">Видео</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="stage">Сцена</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="streaming">Трансляции</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="power">Электро</button>
         </div>
-        <div class="tabs__panels">
-          <div class="equip-grid is-active" id="panel-sound" role="tabpanel" aria-labelledby="tab-sound">
-            <article class="equip"><h3>Линейные массивы</h3><p>Концертные системы для залов, арен и открытых площадок.</p></article>
-            <article class="equip"><h3>Микшерные пульты</h3><p>Yamaha, DiGiCo, Allen &amp; Heath, Soundcraft.</p></article>
-            <article class="equip"><h3>Микрофоны</h3><p>Вокальные, инструментальные и радиосистемы Shure, Sennheiser, DPA.</p></article>
-            <article class="equip"><h3>Бэклайн</h3><p>Гитарные комбо, барабаны, клавишные для артистов.</p></article>
-            <article class="equip"><h3>Мониторинг</h3><p>Сценические мониторы, in-ear и side fill.</p></article>
-            <article class="equip"><h3>Инфраструктура</h3><p>Stage box, усилители, сеть и распределение сигнала.</p></article>
-          </div>
-          <div class="equip-grid" id="panel-light" role="tabpanel" aria-labelledby="tab-light" hidden>
-            <article class="equip"><h3>Световые приборы</h3><p>Головы, PAR, прожекторы, стробоскопы, лазеры.</p></article>
-            <article class="equip"><h3>Световые пульты</h3><p>GrandMA, Avolites, ChamSys для программирования шоу.</p></article>
-            <article class="equip"><h3>LED-приборы</h3><p>RGBW-головы, пиксельные ленты и панели.</p></article>
-            <article class="equip"><h3>Диммеры</h3><p>Силовое распределение и кабельные системы.</p></article>
-            <article class="equip"><h3>Эффекты</h3><p>Туман, дым, конфетти, ветер.</p></article>
-            <article class="equip"><h3>Фермы и тотемы</h3><p>Подвес и размещение света над сценой.</p></article>
-          </div>
-          <div class="equip-grid" id="panel-video" role="tabpanel" aria-labelledby="tab-video" hidden>
-            <article class="equip"><h3>LED-экраны</h3><p>Модульные панели разных шагов для зала и улицы.</p></article>
-            <article class="equip"><h3>Камеры</h3><p>Broadcast, PTZ и краны для многокамерной съёмки.</p></article>
-            <article class="equip"><h3>Проекторы</h3><p>Лазерная проекция, презентации и маппинг.</p></article>
-            <article class="equip"><h3>Видеосерверы</h3><p>Resolume, Watchout, воспроизведение контента и VJ.</p></article>
-            <article class="equip"><h3>Процессоры</h3><p>Свитчинг, масштабирование и микширование сигнала.</p></article>
-            <article class="equip"><h3>Трансляции</h3><p>Эфир на YouTube, VK, Telegram и корпоративные платформы.</p></article>
-          </div>
-          <div class="equip-grid" id="panel-stage" role="tabpanel" aria-labelledby="tab-stage" hidden>
-            <article class="equip"><h3>Фермы</h3><p>Алюминиевые и стальные конструкции для сцен и крыш.</p></article>
-            <article class="equip"><h3>Подиумы</h3><p>Модульные сцены разной высоты с безопасным покрытием.</p></article>
-            <article class="equip"><h3>Декорации</h3><p>Изготовление конструкций под концепцию события.</p></article>
-            <article class="equip"><h3>Лебёдки</h3><p>Цепной и тросовый подъём света и декораций.</p></article>
-            <article class="equip"><h3>Крыши и защита</h3><p>Ветрозащита и тентовые системы для улицы.</p></article>
-            <article class="equip"><h3>Проектирование</h3><p>3D-схема, расчёт нагрузок, документация для площадки.</p></article>
-          </div>
+        <div class="catalog" id="catalogGrid"></div>
+        <div class="catalog__more">
+          <p>Не нашли нужное оборудование? Свяжитесь с нами — у нас есть ещё больше!</p>
+          <a class="btn btn--ghost-orange" href="#contact">Запросить полный каталог →</a>
         </div>
       </div>
     </section>
 
-    <section class="section about" id="about">
-      <div class="container about__grid">
-        <div>
-          <p class="eyebrow">О компании</p>
-          <h2 class="section__title">MediaLive — технический партнёр события, а не просто аренда ящиков</h2>
-          <p class="about__text">Мы закрываем звук, свет, видео и сцену одной командой: инженеры, монтаж, пульты и сопровождение до финального аккорда.</p>
-          <p class="about__text">Работаем с концертами, корпоративами, форумами, свадьбами и трансляциями. Выезжаем по России и СНГ.</p>
-          <ul class="checks">
-            <li>Собственный парк профессионального оборудования</li>
-            <li>Звукорежиссёры, световые дизайнеры, видеоинженеры</li>
-            <li>Смета, схема расстановки и монтаж в графике площадки</li>
-            <li>Сопровождение шоу, а не «привезли и уехали»</li>
-          </ul>
+    <section class="section section--alt" id="about">
+      <div class="about-line about-line--top" aria-hidden="true"></div>
+      <div class="wrap about">
+        <p class="pill pill--cyan pill--center"><i></i>О компании</p>
+        <h2 class="h-display h-display--center">ЦИФРЫ <span class="is-cyan">ГОВОРЯТ</span></h2>
+        <p class="lead lead--center">За 10 лет работы мы обеспечили техническое сопровождение сотен мероприятий — от небольших корпоративов до масштабных концертов и фестивалей.</p>
+        <div class="counters">
+          <div class="counter">
+            <div class="counter__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+            <div class="counter__value glow-cyan"><span data-count="500">0</span>+</div>
+            <div class="counter__label">Мероприятий</div>
+          </div>
+          <div class="counter">
+            <div class="counter__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+            <div class="counter__value glow-cyan"><span data-count="10">0</span> лет</div>
+            <div class="counter__label">Опыта на рынке</div>
+          </div>
+          <div class="counter">
+            <div class="counter__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg></div>
+            <div class="counter__value glow-cyan"><span data-count="300">0</span>+</div>
+            <div class="counter__label">Единиц техники</div>
+          </div>
+          <div class="counter">
+            <div class="counter__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="counter__value glow-cyan"><span data-count="50">0</span>+</div>
+            <div class="counter__label">Постоянных клиентов</div>
+          </div>
         </div>
-        <ol class="steps">
-          <li>
-            <span>01</span>
-            <div>
-              <h3>Заявка</h3>
-              <p>Дата, площадка, формат, что должно быть слышно и видно.</p>
-            </div>
-          </li>
-          <li>
-            <span>02</span>
-            <div>
-              <h3>Проект</h3>
-              <p>Техническое решение, смета, при необходимости — 3D-схема.</p>
-            </div>
-          </li>
-          <li>
-            <span>03</span>
-            <div>
-              <h3>Монтаж</h3>
-              <p>Доставка, сборка, кабель, пульты, проверка до гостей.</p>
-            </div>
-          </li>
-          <li>
-            <span>04</span>
-            <div>
-              <h3>Шоу</h3>
-              <p>Инженеры на площадке до разбора. Техника работает, а не «надеемся».</p>
-            </div>
-          </li>
-        </ol>
+        <div class="features">
+          <article class="feature feature--cyan">
+            <span class="feature__bar"></span>
+            <h3>ГАРАНТИЯ КАЧЕСТВА</h3>
+            <p>Всё оборудование проходит предрейсовую проверку. В каждой позиции — резервная техника.</p>
+          </article>
+          <article class="feature feature--orange">
+            <span class="feature__bar"></span>
+            <h3>ТЕХНИЧЕСКИЙ РАЙДЕР</h3>
+            <p>Работаем с любыми райдерами исполнителей. Быстрый ответ и согласование за 2 часа.</p>
+          </article>
+          <article class="feature feature--cyan">
+            <span class="feature__bar"></span>
+            <h3>МОНТАЖ И ДЕМОНТАЖ</h3>
+            <p>Собственная монтажная бригада. Оперативный выезд по Москве и области.</p>
+          </article>
+        </div>
       </div>
+      <div class="about-line about-line--bottom" aria-hidden="true"></div>
     </section>
 
-    <section class="section contact" id="contact">
-      <div class="container contact__grid">
-        <div>
-          <p class="eyebrow">Контакты</p>
-          <h2 class="section__title">Пришлите задачу — ответим с решением и сметой</h2>
-          <p class="section__desc">Обычно перезваниваем в течение рабочего дня. Если событие завтра — звоните, так быстрее.</p>
-          <div class="contact__links">
-            <a href="tel:+78001234567">
-              <span>Телефон</span>
-              +7 (800) 123-45-67
-            </a>
-            <a href="mailto:info@medialive.ru">
-              <span>Почта</span>
-              info@medialive.ru
-            </a>
-            <p>
-              <span>География</span>
-              Россия и СНГ
-            </p>
-          </div>
+    <section class="section section--dark contact" id="contact">
+      <div class="corner corner--tl cyan" aria-hidden="true"></div>
+      <div class="corner corner--br orange" aria-hidden="true"></div>
+      <div class="wrap contact__inner">
+        <p class="pill pill--cyan pill--center"><i class="is-pulse"></i>Контакты</p>
+        <h2 class="h-display h-display--center">ГОТОВЫ К <span class="is-cyan">РАБОТЕ</span></h2>
+        <p class="lead lead--center">Опишите ваше мероприятие — мы подберём оборудование и рассчитаем стоимость в течение часа.</p>
+        <div class="contact__grid">
+          <a class="contact-card contact-card--cyan" href="tel:+79000000000">
+            <span class="contact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <span class="contact-card__label">Телефон</span>
+            <span class="contact-card__value">+7 (900) 000-00-00</span>
+          </a>
+          <a class="contact-card contact-card--orange" href="mailto:info@medialive.ru">
+            <span class="contact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+            </span>
+            <span class="contact-card__label">Email</span>
+            <span class="contact-card__value">info@medialive.ru</span>
+          </a>
+          <a class="contact-card contact-card--cyan" href="https://wa.me/79000000000" target="_blank" rel="noopener noreferrer">
+            <span class="contact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.4 8.4 0 0 1-9.5 8.3L7 21l1.3-4.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+            </span>
+            <span class="contact-card__label">WhatsApp</span>
+            <span class="contact-card__value">Написать в WhatsApp</span>
+          </a>
         </div>
-        <form class="form" id="contactForm" novalidate>
-          <div class="form__row">
-            <label for="name">Имя</label>
-            <input id="name" name="name" type="text" autocomplete="name" placeholder="Иван Иванов" required>
-          </div>
-          <div class="form__row">
-            <label for="phone">Телефон</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
-          </div>
-          <div class="form__row">
-            <label for="event">Тип мероприятия</label>
-            <select id="event" name="event">
-              <option value="">Выберите тип</option>
-              <option value="Концерт / фестиваль">Концерт / фестиваль</option>
-              <option value="Корпоратив">Корпоратив</option>
-              <option value="Конференция / форум">Конференция / форум</option>
-              <option value="Свадьба / банкет">Свадьба / банкет</option>
-              <option value="Трансляция">Прямая трансляция</option>
-              <option value="Другое">Другое</option>
-            </select>
-          </div>
-          <div class="form__row">
-            <label for="message">О проекте</label>
-            <textarea id="message" name="message" rows="4" placeholder="Дата, площадка, число гостей, что нужно: звук, свет, экран, сцена"></textarea>
-          </div>
-          <button class="btn btn--gold btn--lg btn--full" type="submit">Отправить заявку</button>
-          <p class="form__note">Откроется почтовая программа с готовым письмом. Либо напишите или позвоните напрямую.</p>
-        </form>
+        <div class="contact__meta">
+          <p>Москва и Московская область</p>
+          <p>Работаем 7 дней в неделю, 24/7</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer__inner">
-      <a class="logo" href="#top">
-        <span class="logo__mark" aria-hidden="true">ML</span>
-        <span class="logo__text">MediaLive</span>
-      </a>
-      <nav class="footer__nav" aria-label="Навигация в подвале">
-        <a href="#services">Услуги</a>
-        <a href="#equipment">Оборудование</a>
-        <a href="#about">О компании</a>
-        <a href="#contact">Контакты</a>
-      </nav>
-      <p class="footer__copy">© <span id="year"></span> MediaLive</p>
+    <div class="wrap footer__grid">
+      <div>
+        <a class="logo" href="#top"><img src="img/logo.png" alt="Medialive"></a>
+        <p>Профессиональное техническое обеспечение мероприятий. Аренда звукового, светового и видеооборудования.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <nav>
+          <a href="#services">Услуги</a>
+          <a href="#catalog">Каталог</a>
+          <a href="#contact">Контакты</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+        <a href="mailto:info@medialive.ru">info@medialive.ru</a>
+        <a href="https://wa.me/79000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </div>
+    <div class="wrap footer__bottom">
+      <p>© <span id="year"></span> Medialive. Все права защищены.</p>
+      <p>Техническое обеспечение мероприятий</p>
     </div>
   </footer>
 
-  <p class="toast" id="toast" role="status" hidden>Черновик письма готов. Отправьте его из почтовой программы.</p>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "MediaLive",
-    "description": "Техническое обеспечение мероприятий: звук, свет, видео, LED-экраны, сценические конструкции.",
-    "telephone": "+78001234567",
-    "email": "info@medialive.ru",
-    "areaServed": "RU"
-  }
-  </script>
+  <script src="js/catalog.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

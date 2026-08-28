@@ -44,4 +44,4 @@ echo
 echo "Сайт разложен в ${SITE_ROOT} и слушает 80 порт."
 echo "В DNS домена ${DOMAIN} должна быть A-запись на IP этого VPS."
 echo "Когда DNS дойдёт, выпустите сертификат:"
-echo "  sudo certbot --nginx -d ${DOMAIN} -d www.${DOMAIN}"
+echo "  sudo certbot --nginx -d ${DOMAIN}"

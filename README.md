@@ -1,54 +1,34 @@
-# MediaLive — сайт компании
+# Medialive — аренда техники для мероприятий
 
-Лендинг технической поддержки мероприятий: звук, свет, видео, LED-экраны и сцены.
+Сайт компании: звук, свет, видео, LED-экраны, сцена, трансляции и электро. Скопирован с https://rent.medialive.ru/ (Enter Pro) на статику HTML/CSS/JS для своего VPS.
 
-Сайт статический: HTML, CSS и JavaScript. Раздаётся Nginx с вашего VPS, домен смотрит на IP сервера.
+Домен: **https://rent.medialive.ru/**
 
-## Размещение на VPS
+## Выкладка на VPS
 
-Нужны Ubuntu/Debian, домен и SSH. В DNS домена заранее поставьте **A-запись** на IP VPS (и для `www`, если он нужен).
-
-```bash
-sudo apt-get update
-sudo apt-get install -y git
-git clone https://github.com/vecherb-spec/site.git
-cd site
-sudo bash deploy/setup-vps.sh ваш-домен.ru
-```
-
-Скрипт поставит Nginx, скопирует файлы в `/var/www/medialive` и включит сайт на 80 порту.
-
-Когда домен уже открывается по http, включите HTTPS:
+В DNS `rent.medialive.ru` должна быть A-запись на IP сервера.
 
 ```bash
-sudo certbot --nginx -d ваш-домен.ru -d www.ваш-домен.ru
+sudo bash deploy/setup-vps.sh rent.medialive.ru
+sudo certbot --nginx -d rent.medialive.ru
 ```
 
-Certbot сам поставит сертификат Let's Encrypt и редирект с http на https.
+Сайт окажется в `/var/www/medialive`. После правок: `git pull` и снова `setup-vps.sh`.
 
-Обновить сайт после правок:
-
-```bash
-cd site
-git pull
-sudo bash deploy/setup-vps.sh ваш-домен.ru
-```
-
-Готовый конфиг Nginx: `deploy/nginx.conf`. Файл `.htaccess` на VPS не нужен — это только для Apache-хостинга.
-
-## Как открыть локально
+## Локально
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Адрес: http://localhost:8080
+Откройте http://localhost:8080
 
-## Что заменить перед запуском
+## Контакты на сайте
 
-В `index.html` и `js/main.js` сейчас заглушки:
+Сейчас как на Enter Pro:
 
-- телефон `+7 (800) 123-45-67`
+- телефон `+7 (900) 000-00-00`
 - почта `info@medialive.ru`
+- WhatsApp `https://wa.me/79000000000`
 
-Пришлите домен — пропишу его в мета-тегах.
+Замените на рабочие номера в `index.html`.
