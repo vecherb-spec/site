@@ -45,7 +45,7 @@ const renderCatalog = (id) => {
         ${item.badge ? `<span class="equip__badge">${item.badge}</span>` : ""}
         <h3>${item.name}</h3>
         <p>${item.spec}</p>
-        <a href="#contact">Запросить цену →</a>
+        <a href="#contact">Запросить цену <span aria-hidden="true">→</span></a>
       </article>`
     )
     .join("");
