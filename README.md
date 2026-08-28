@@ -31,7 +31,8 @@ python3 -m http.server 8080
 
 - телефон `+7 (926) 335-39-35`
 - почта `info@medialive.ru`
-- WhatsApp `https://wa.me/79263353935`
+- Telegram [@medialiveled](https://t.me/medialiveled)
+- MAX по номеру `+7 (926) 335-39-35`
 - адрес: ул. Свободы, 22с1, Москва
 
 Замените на рабочие номера в `index.html`.
