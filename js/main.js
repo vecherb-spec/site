@@ -88,8 +88,8 @@ form?.addEventListener("submit", (event) => {
     message.value.trim() || "Без описания",
   ].join("\n");
 
-  const href = `mailto:info@medialife.ru?subject=${encodeURIComponent(
-    "Заявка с сайта MediaLife"
+  const href = `mailto:info@medialive.ru?subject=${encodeURIComponent(
+    "Заявка с сайта MediaLive"
   )}&body=${encodeURIComponent(body)}`;
 
   window.location.href = href;

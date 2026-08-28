@@ -13,8 +13,8 @@ if [[ -z "${DOMAIN}" ]]; then
 fi
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-SITE_ROOT="/var/www/medialife"
-NGINX_SITE="/etc/nginx/sites-available/medialife"
+SITE_ROOT="/var/www/medialive"
+NGINX_SITE="/etc/nginx/sites-available/medialive"
 
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
@@ -28,7 +28,7 @@ rsync -a --delete \
   "${REPO_ROOT}/" "${SITE_ROOT}/"
 
 sed "s/YOUR_DOMAIN/${DOMAIN}/g" "${REPO_ROOT}/deploy/nginx.conf" > "${NGINX_SITE}"
-ln -sfn "${NGINX_SITE}" /etc/nginx/sites-enabled/medialife
+ln -sfn "${NGINX_SITE}" /etc/nginx/sites-enabled/medialive
 rm -f /etc/nginx/sites-enabled/default
 
 nginx -t
