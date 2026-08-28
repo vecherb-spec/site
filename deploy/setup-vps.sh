@@ -2,15 +2,11 @@
 set -euo pipefail
 
 if [[ "${EUID}" -ne 0 ]]; then
-  echo "Запустите от root: sudo ./deploy/setup-vps.sh ваш-домен.ru"
+  echo "Запустите от root: sudo ./deploy/setup-vps.sh medialive.tech"
   exit 1
 fi
 
-DOMAIN="${1:-}"
-if [[ -z "${DOMAIN}" ]]; then
-  echo "Укажите домен: sudo ./deploy/setup-vps.sh example.ru"
-  exit 1
-fi
+DOMAIN="${1:-medialive.tech}"
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SITE_ROOT="/var/www/medialive"
@@ -42,6 +38,6 @@ fi
 
 echo
 echo "Сайт разложен в ${SITE_ROOT} и слушает 80 порт."
-echo "В DNS домена ${DOMAIN} должна быть A-запись на IP этого VPS."
+echo "В DNS ${DOMAIN} и www.${DOMAIN} поставьте A-запись на IP этого VPS."
 echo "Когда DNS дойдёт, выпустите сертификат:"
-echo "  sudo certbot --nginx -d ${DOMAIN}"
+echo "  sudo certbot --nginx -d ${DOMAIN} -d www.${DOMAIN}"
