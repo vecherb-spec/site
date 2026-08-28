@@ -239,6 +239,7 @@ button {
   letter-spacing: 0.02em;
   font-weight: 400;
   margin-bottom: 16px;
+  max-width: 100%;
 }
 
 .h-display--center {
@@ -844,6 +845,10 @@ button {
   .header__cta { display: none; }
   .burger { display: block; }
 
+  .wrap {
+    padding-inline: 1.2rem;
+  }
+
   .hero__stats,
   .services,
   .catalog,
@@ -859,7 +864,28 @@ button {
     grid-template-columns: 1fr 1fr;
   }
 
-  .hero__title { font-size: clamp(52px, 16vw, 88px); }
+  .hero__title {
+    font-size: clamp(44px, 13vw, 72px);
+  }
+
+  .hero__title span:first-child {
+    white-space: normal;
+  }
+
+  .h-display {
+    font-size: clamp(30px, 8.6vw, 48px);
+    letter-spacing: 0.01em;
+  }
+
+  .h-display span {
+    display: block;
+  }
+
+  .tabs button {
+    padding: 9px 14px;
+    font-size: 0.82rem;
+  }
+
   .section { padding: 72px 0; }
   .corner--tl { left: 16px; }
   .corner--br { right: 16px; }
