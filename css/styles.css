@@ -688,7 +688,7 @@ button {
 }
 
 .contact__inner {
-  max-width: 860px;
+  max-width: 1200px;
   text-align: center;
 }
 
@@ -701,7 +701,7 @@ button {
   display: grid;
   justify-items: center;
   gap: 8px;
-  padding: 24px;
+  padding: 24px 16px;
 }
 
 .contact-card__icon {
@@ -740,8 +740,14 @@ button {
   font-weight: 500;
 }
 
-.contact-card--cyan .contact-card__value { color: #67e8f9; font-weight: 600; }
-.contact-card--orange .contact-card__value { color: #fb923c; font-weight: 600; }
+.contact-card--cyan .contact-card__value,
+.contact-card--orange .contact-card__value {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.contact-card--cyan .contact-card__value { color: #67e8f9; }
+.contact-card--orange .contact-card__value { color: #fb923c; }
 
 .contact__meta {
   display: flex;
