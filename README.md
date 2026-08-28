@@ -6,14 +6,18 @@
 
 ## Выкладка на VPS
 
-В DNS домена `medialive.tech` (и `www.medialive.tech`) поставьте **A-запись** на IP сервера.
+В панели REG.RU для `medialive.tech` поставьте A-записи на IP VPS **77.110.100.102**:
+
+| Имя | Тип | Значение |
+| --- | --- | --- |
+| `@` | A | `77.110.100.102` |
+| `www` | A | `77.110.100.102` |
+
+Сейчас домен смотрит на `95.163.244.138`, поэтому HTTPS ещё не выпускается. Когда записи сменятся:
 
 ```bash
-sudo bash deploy/setup-vps.sh medialive.tech
 sudo certbot --nginx -d medialive.tech -d www.medialive.tech
 ```
-
-Сайт окажется в `/var/www/medialive`. После правок: `git pull` и снова `setup-vps.sh`.
 
 ## Локально
 
