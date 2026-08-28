@@ -721,6 +721,17 @@ button {
   color: var(--orange);
 }
 
+.contact-card__icon--max {
+  background: rgb(255 255 255 / 0.06);
+  padding: 8px;
+}
+
+.contact-card__icon--max img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
 .contact-card__label {
   font-size: 0.72rem;
   letter-spacing: 0.16em;
