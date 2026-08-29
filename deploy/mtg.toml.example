@@ -1,0 +1,9 @@
+# Minimal mtg v2 config. Secret is generated on the VPS and never committed.
+# Bind a free port — not 80/443 (nginx) and not 8443 (Amnezia Xray).
+
+secret = "REPLACE_WITH_GENERATED_SECRET"
+bind-to = "0.0.0.0:4433"
+public-ipv4 = "77.110.100.102"
+prefer-ip = "prefer-ipv4"
+concurrency = 1024
+auto-update = false

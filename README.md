@@ -44,3 +44,15 @@ python3 -m http.server 8080
 Замените контактные данные в `index.html`:
 - Телефон: `+7 (800) 123-45-67`
 - Email: `info@medialife.ru`
+
+## Telegram MTProto-прокси на VPS
+
+Отдельный сервис `mtg` на порту **4433**. Не занимает 80/443 (сайты) и не трогает Amnezia на 8443.
+
+На сервере:
+
+```bash
+sudo ./deploy/setup-mtproto.sh
+```
+
+Ссылка для Telegram пишется в `/root/mtg-access.txt` и не коммитится.
