@@ -54,4 +54,10 @@ sudo ./deploy/setup-mtproto.sh
 sudo ./deploy/enable-mtg-443.sh
 ```
 
-Ссылки: `/root/mtg-access.txt` (4433) и `/root/mtg-access-443.txt` (443). Откат Nginx: `sudo ./deploy/rollback-mtg-443.sh`.
+Ссылки: `/root/mtg-access.txt` (4433) и `/root/mtg-access-443.txt` (443). Если домашний Wi‑Fi режет и 443, те же секрет можно слушать на 2083/2053/2087/2096/8444:
+
+```bash
+sudo ./deploy/install-mtg-altports.sh
+```
+
+Откат Nginx: `sudo ./deploy/rollback-mtg-443.sh`.

@@ -1,0 +1,13 @@
+[Unit]
+Description=Redirect Cloudflare-style HTTPS ports to mtg :4433
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/sbin/mtg-altports.sh apply
+ExecStop=/usr/local/sbin/mtg-altports.sh clear
+
+[Install]
+WantedBy=multi-user.target
