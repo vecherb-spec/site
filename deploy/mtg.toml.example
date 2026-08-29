@@ -7,3 +7,8 @@ public-ipv4 = "77.110.100.102"
 prefer-ip = "prefer-ipv4"
 concurrency = 1024
 auto-update = false
+
+# Failed FakeTLS (browsers, DPI probes) → local nginx, not a loop back to :443
+[domain-fronting]
+host = "127.0.0.1"
+port = 4443

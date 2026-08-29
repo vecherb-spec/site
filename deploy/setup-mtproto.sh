@@ -10,7 +10,7 @@ fi
 
 MTG_VERSION="${MTG_VERSION:-2.2.8}"
 MTG_PORT="${MTG_PORT:-4433}"
-MTG_FRONTING="${MTG_FRONTING:-www.cloudflare.com}"
+MTG_FRONTING="${MTG_FRONTING:-www.medialive.tech}"
 PUBLIC_IP="${PUBLIC_IP:-77.110.100.102}"
 BIN="/usr/local/bin/mtg"
 CONF="/etc/mtg.toml"
@@ -54,6 +54,10 @@ public-ipv4 = "${PUBLIC_IP}"
 prefer-ip = "prefer-ipv4"
 concurrency = 1024
 auto-update = false
+
+[domain-fronting]
+host = "127.0.0.1"
+port = 4443
 EOF
   chmod 0644 "${CONF}"
 fi

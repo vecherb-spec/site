@@ -47,7 +47,7 @@ python3 -m http.server 8080
 
 ## Telegram MTProto-прокси на VPS
 
-Сервис `mtg` слушает **4433**. Для Wi‑Fi, где этот порт режут, публичный **443** делится по SNI: сайты идут в Nginx на `127.0.0.1:4443`, FakeTLS Telegram — в mtg.
+Сервис `mtg` слушает **4433**. На Wi‑Fi ТСПУ режет чужой SNI (Cloudflare на IP сайта), поэтому FakeTLS маскируется под **www.medialive.tech**. Публичный **443** делится по SNI: этот хост — в mtg, остальные домены — в Nginx на `127.0.0.1:4443`.
 
 ```bash
 sudo ./deploy/setup-mtproto.sh
