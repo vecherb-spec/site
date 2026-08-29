@@ -47,12 +47,11 @@ python3 -m http.server 8080
 
 ## Telegram MTProto-прокси на VPS
 
-Отдельный сервис `mtg` на порту **4433**. Не занимает 80/443 (сайты) и не трогает Amnezia на 8443.
-
-На сервере:
+Сервис `mtg` слушает **4433**. Для Wi‑Fi, где этот порт режут, публичный **443** делится по SNI: сайты идут в Nginx на `127.0.0.1:4443`, FakeTLS Telegram — в mtg.
 
 ```bash
 sudo ./deploy/setup-mtproto.sh
+sudo ./deploy/enable-mtg-443.sh
 ```
 
-Ссылка для Telegram пишется в `/root/mtg-access.txt` и не коммитится.
+Ссылки: `/root/mtg-access.txt` (4433) и `/root/mtg-access-443.txt` (443). Откат Nginx: `sudo ./deploy/rollback-mtg-443.sh`.
