@@ -18,7 +18,7 @@ concurrency = 1024
 auto-update = false
 
 [domain-fronting]
-host = "127.0.0.1"
+ip = "127.0.0.1"
 port = 4443
 EOF
 chmod 0644 "${CONF}"
@@ -33,7 +33,7 @@ systemctl is-active mtg nginx
 fail=0
 check() {
   local host="$1"
-  code="$(curl -sk -o /dev/null -w '%{http_code}' --max-time 15 --resolve "${host}:443:127.0.0.1" "https://${host}/" || echo 000)"
+  code="$(curl -sk -o /dev/null -w '%{http_code}' --max-time 20 --resolve "${host}:443:127.0.0.1" "https://${host}/" || echo 000)"
   echo "${host} -> ${code}"
   if [[ "${code}" != 200 && "${code}" != 301 && "${code}" != 302 ]]; then
     fail=1

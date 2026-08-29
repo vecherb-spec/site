@@ -56,7 +56,7 @@ concurrency = 1024
 auto-update = false
 
 [domain-fronting]
-host = "127.0.0.1"
+ip = "127.0.0.1"
 port = 4443
 EOF
   chmod 0644 "${CONF}"
