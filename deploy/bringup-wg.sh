@@ -33,7 +33,7 @@ if [[ -f "${HOST_START}" ]]; then
 fi
 
 # Always apply setconf. Do not call wg-quick (it can "succeed" with an empty iface).
-docker exec "${CONTAINER}" /bin/bash -s <<'EOS'
+docker exec -i "${CONTAINER}" /bin/bash -s <<'EOS'
 set -euo pipefail
 CONF=/opt/amnezia/wireguard/wg0.conf
 test -f "${CONF}"
@@ -44,7 +44,7 @@ if ! ip link show wg0 >/dev/null 2>&1; then
   ip link add dev wg0 type wireguard
 fi
 
-grep -E '^(PrivateKey|ListenPort|FwMark|\[Peer\]|PublicKey|PresharedKey|AllowedIPs|Endpoint|PersistentKeepalive)' \
+grep -E '^(\[Interface\]|\[Peer\]|PrivateKey|ListenPort|FwMark|PublicKey|PresharedKey|AllowedIPs|Endpoint|PersistentKeepalive)' \
   "${CONF}" > /tmp/wg0.setconf
 wg setconf wg0 /tmp/wg0.setconf
 

@@ -14,7 +14,7 @@ if [[ -f "${CONF}" ]]; then
   if ! ip link show wg0 >/dev/null 2>&1; then
     ip link add dev wg0 type wireguard
   fi
-  grep -E '^(PrivateKey|ListenPort|FwMark|\[Peer\]|PublicKey|PresharedKey|AllowedIPs|Endpoint|PersistentKeepalive)' \
+  grep -E '^(\[Interface\]|\[Peer\]|PrivateKey|ListenPort|FwMark|PublicKey|PresharedKey|AllowedIPs|Endpoint|PersistentKeepalive)' \
     "${CONF}" > /tmp/wg0.setconf
   wg setconf wg0 /tmp/wg0.setconf
   ip -4 addr show dev wg0 | grep -q '10.8.1.0/24' || ip addr add 10.8.1.0/24 dev wg0
