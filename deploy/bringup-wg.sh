@@ -32,6 +32,7 @@ if [[ -f "${HOST_START}" ]]; then
   docker exec "${CONTAINER}" chmod 755 /opt/amnezia/start.sh
 fi
 
+# Always apply setconf. Do not call wg-quick (it can "succeed" with an empty iface).
 docker exec "${CONTAINER}" /bin/bash -s <<'EOS'
 set -euo pipefail
 CONF=/opt/amnezia/wireguard/wg0.conf
