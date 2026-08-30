@@ -1,0 +1,13 @@
+[Unit]
+Description=Bring up classic WireGuard inside amnezia-wireguard
+After=network-online.target docker.service
+Wants=network-online.target
+Requires=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/sbin/bringup-wg.sh
+
+[Install]
+WantedBy=multi-user.target

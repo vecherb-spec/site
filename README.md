@@ -44,3 +44,13 @@ python3 -m http.server 8080
 Замените контактные данные в `index.html`:
 - Телефон: `+7 (800) 123-45-67`
 - Email: `info@medialife.ru`
+
+## VPN на iPhone (официальный WireGuard)
+
+Приложения **AmneziaVPN** в российском App Store нет. На iOS используйте официальное приложение **WireGuard** (оно есть в App Store) и классический WireGuard на VPS, контейнер `amnezia-wireguard`, UDP **36486**.
+
+```bash
+sudo ./deploy/install-wg-ios.sh
+```
+
+Клиентский профиль лежит только на сервере: `/root/ios-wireguard.conf` (не коммитьте ключи). Если домашний Wi‑Fi режет UDP, проверьте туннель на LTE.
