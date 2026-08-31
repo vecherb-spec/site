@@ -79,10 +79,20 @@ button {
   gap: 24px;
 }
 
-.logo img {
-  height: 32px;
-  width: auto;
-  filter: brightness(0) invert(1);
+.logo {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: var(--display);
+  font-size: 26px;
+  letter-spacing: 0.07em;
+  line-height: 1;
+  color: #fff;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.logo span {
+  color: var(--cyan);
 }
 
 .nav {
@@ -124,6 +134,7 @@ button {
   display: none;
   width: 40px;
   height: 40px;
+  flex-shrink: 0;
 }
 
 .burger span {
@@ -954,11 +965,10 @@ button {
 }
 
 .footer .logo {
-  display: inline-block;
+  display: inline-flex;
   margin-bottom: 16px;
+  font-size: 24px;
 }
-
-.footer .logo img { height: 28px; }
 
 .footer p,
 .footer a {
@@ -1029,7 +1039,8 @@ button {
   .nav,
   .header__cta,
   .header__phone { display: none; }
-  .burger { display: block; }
+  .burger { display: block; flex-shrink: 0; }
+  .logo { font-size: 22px; letter-spacing: 0.05em; }
 
   .wrap {
     padding-inline: 1.2rem;
