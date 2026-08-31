@@ -15,7 +15,7 @@ window.CATALOG = [
   {
     id: "light",
     items: [
-      { name: "Beam Spot 300W", spec: "300W, Beam + Spot, CMY, Gobo, Prism", badge: "Топ", photo: "img/catalog/r5/light-beam.jpg" },
+      { name: "Beam Spot 300W", spec: "300W, Beam + Spot, CMY, Gobo, Prism", badge: "Топ", photo: "img/catalog/r7/light-beam.jpg" },
       { name: "LED Wash 19×40W", spec: "19×40W RGBW, зум 4°–60°, DMX", photo: "img/catalog/r5/light-wash-19.jpg" },
       { name: "LED Wash 7×40W Beya", spec: "7×40W RGBW, компактный, DMX", photo: "img/catalog/r5/light-wash-7.jpg" },
       { name: "LED Bar", spec: "RGBW, 12 секций, линейный, IP65", photo: "img/catalog/r5/light-bar.jpg" },
