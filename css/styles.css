@@ -834,7 +834,7 @@ button {
   text-align: center;
 }
 
-.lead-form__consent {
+.lead-form label.lead-form__consent {
   display: flex;
   align-items: flex-start;
   gap: 10px;
