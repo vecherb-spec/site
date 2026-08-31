@@ -109,6 +109,17 @@ button {
   margin-left: 0;
 }
 
+.header__phone {
+  color: var(--cyan);
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 0.92rem;
+}
+
+.header__phone:hover {
+  color: #5edfff;
+}
+
 .burger {
   display: none;
   width: 40px;
@@ -823,6 +834,85 @@ button {
   text-align: center;
 }
 
+.lead-form__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.lead-form__consent input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex: none;
+  accent-color: var(--cyan);
+}
+
+.lead-form__consent a {
+  color: var(--cyan);
+  text-decoration: underline;
+}
+
+.cookie-bar {
+  position: fixed;
+  z-index: 80;
+  inset: auto 16px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px;
+  background: rgb(10 11 18 / 0.96);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgb(0 0 0 / 0.35);
+}
+
+.cookie-bar[hidden] {
+  display: none;
+}
+
+.cookie-bar p {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.cookie-bar a {
+  color: var(--cyan);
+}
+
+.legal-page {
+  padding-top: 96px;
+}
+
+.legal {
+  max-width: 800px;
+}
+
+.legal h2 {
+  font-size: 1.15rem;
+  margin: 28px 0 10px;
+}
+
+.legal p,
+.legal li {
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.legal ul {
+  padding-left: 1.2rem;
+}
+
+.legal a {
+  color: var(--cyan);
+}
+
 .contact__meta {
   display: flex;
   justify-content: center;
@@ -883,7 +973,11 @@ button {
   border-top: 1px solid var(--border);
 }
 
-.footer__bottom p { font-size: 0.75rem; }
+.footer__bottom p {
+  font-size: 0.75rem;
+  max-width: 52rem;
+  white-space: normal;
+}
 
 @keyframes pulse {
   0%, 100% { opacity: 1; }
@@ -915,7 +1009,8 @@ button {
 
 @media (max-width: 720px) {
   .nav,
-  .header__cta { display: none; }
+  .header__cta,
+  .header__phone { display: none; }
   .burger { display: block; }
 
   .wrap {
@@ -970,6 +1065,12 @@ button {
 
   .lead-form__row {
     grid-template-columns: 1fr;
+  }
+
+  .cookie-bar {
+    flex-direction: column;
+    align-items: stretch;
+    inset: auto 12px 12px;
   }
 
   .section { padding: 72px 0; }

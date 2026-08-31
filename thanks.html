@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заявка отправлена — Medialive</title>
+  <meta name="description" content="Спасибо, мы свяжемся с вами и рассчитаем стоимость.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="img/favicon.png?v=1" type="image/png">
+  <link rel="stylesheet" href="css/styles.css?v=9">
+</head>
+<body>
+  <header class="header is-scrolled">
+    <div class="wrap header__bar">
+      <a class="logo" href="index.html" aria-label="Medialive"><img src="img/logo.png" alt="Medialive"></a>
+      <a class="header__phone" href="tel:+79263353935">+7 (926) 335-39-35</a>
+      <a class="btn btn--cyan" href="index.html">На главную</a>
+    </div>
+  </header>
+  <main class="section">
+    <div class="wrap" style="text-align:center">
+      <p class="pill pill--cyan pill--center"><i></i>Заявка</p>
+      <h1 class="h-display">СПАСИБО, <span class="is-cyan">ЗАЯВКА ПРИНЯТА</span></h1>
+      <p class="lead lead--center">Мы свяжемся с вами в течение часа в рабочее время. Можно сразу позвонить, написать в Telegram или открыть письмо на info@medialive.ru.</p>
+      <div class="hero__actions" style="justify-content:center">
+        <a class="btn btn--cyan btn--lg" href="tel:+79263353935" data-goal="phone">Позвонить</a>
+        <a class="btn btn--ghost btn--lg" href="https://t.me/medialiveled" target="_blank" rel="noopener noreferrer" data-goal="telegram">Telegram</a>
+        <a class="btn btn--ghost-orange btn--lg" id="openMail" href="mailto:info@medialive.ru">Открыть письмо</a>
+      </div>
+    </div>
+  </main>
+  <script src="js/site-config.js"></script>
+  <script src="js/analytics.js"></script>
+  <script>
+    (function () {
+      const raw = sessionStorage.getItem("leadDraft");
+      const mail = document.getElementById("openMail");
+      if (!raw || !mail) return;
+      try {
+        const data = JSON.parse(raw);
+        const body = ["Имя: " + (data.name || ""), "Связь: " + (data.contact || ""), "", data.message || ""].join("\n");
+        mail.href = "mailto:info@medialive.ru?subject=" + encodeURIComponent("Заявка на КП — Medialive") + "&body=" + encodeURIComponent(body);
+      } catch (e) {}
+    })();
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/101805439" style="position:absolute;left:-9999px" alt=""></div></noscript>
+</body>
+</html>

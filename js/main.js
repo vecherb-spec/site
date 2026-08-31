@@ -71,22 +71,37 @@ catalogGrid?.addEventListener("click", (event) => {
 
 renderCatalog("sound");
 
+document.addEventListener("click", (event) => {
+  const goalLink = event.target.closest("[data-goal]");
+  if (goalLink && typeof window.trackGoal === "function") {
+    window.trackGoal(goalLink.getAttribute("data-goal"));
+  }
+});
+
+const cookieBar = document.getElementById("cookieBar");
+const cookieOk = document.getElementById("cookieOk");
+if (cookieBar && !localStorage.getItem("ml-cookie-ok")) {
+  cookieBar.hidden = false;
+}
+cookieOk?.addEventListener("click", () => {
+  localStorage.setItem("ml-cookie-ok", "1");
+  if (cookieBar) cookieBar.hidden = true;
+});
+
 const leadForm = document.getElementById("leadForm");
 leadForm?.addEventListener("submit", (event) => {
   event.preventDefault();
+  const consent = document.getElementById("leadConsent");
+  if (consent && !consent.checked) {
+    consent.focus();
+    return;
+  }
   const name = document.getElementById("leadName")?.value.trim() || "";
   const contact = document.getElementById("leadContact")?.value.trim() || "";
   const message = document.getElementById("leadMessage")?.value.trim() || "";
-  const body = [
-    `Имя: ${name}`,
-    `Связь: ${contact}`,
-    "",
-    message,
-  ].join("\n");
-  const href = `mailto:info@medialive.ru?subject=${encodeURIComponent("Заявка на КП — Medialive")}&body=${encodeURIComponent(body)}`;
-  window.location.href = href;
-  const hint = document.getElementById("leadHint");
-  if (hint) hint.textContent = "Если почта не открылась — напишите на info@medialive.ru или в Telegram @medialiveled.";
+  sessionStorage.setItem("leadDraft", JSON.stringify({ name, contact, message }));
+  if (typeof window.trackGoal === "function") window.trackGoal("lead");
+  window.location.href = "thanks.html";
 });
 
 const counters = document.querySelectorAll("[data-count]");
