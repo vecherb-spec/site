@@ -28,10 +28,10 @@ window.CATALOG = [
   {
     id: "video",
     items: [
-      { name: "LED-экран Absen NT2.6 Indoor", spec: "P2.6, Indoor, 500×500 мм, до 1200 нит", badge: "Хит", photo: "img/catalog/r5/video-led-indoor.jpg" },
-      { name: "LED-экран Unilumin URM III Outdoor", spec: "P3.9, Outdoor IP65, 500×500 / 1000 мм, до 5000 нит", photo: "img/catalog/r5/video-led-outdoor.jpg" },
-      { name: "LED-экран Absen NT1.9 Indoor", spec: "P1.9, Indoor, 500×500 мм, до 800 нит", photo: "img/catalog/r5/video-led-fine.jpg" },
-      { name: "LED-экран Dicolor DP-261 гибкий", spec: "P2.6, гибкий модуль, кривые ±5°, Indoor", photo: "img/catalog/r5/video-led-flex.jpg" },
+      { name: "LED-экран 2.6 мм Indoor", spec: "P2.6, Indoor, до 1200 нит, модульный", badge: "Хит", photo: "img/catalog/r5/video-led-indoor.jpg" },
+      { name: "LED-экран 3.9 мм Outdoor", spec: "P3.9, Outdoor, до 5000 нит, IP65", photo: "img/catalog/r5/video-led-outdoor.jpg" },
+      { name: "LED-экран 1.9 мм Indoor", spec: "P1.9, Indoor, до 800 нит, высокое разрешение", photo: "img/catalog/r5/video-led-fine.jpg" },
+      { name: "LED-экран 2.6 мм гибкий", spec: "P2.6, гибкий модуль, творческие формы", photo: "img/catalog/r6/video-led-flex.jpg" },
       { name: "Видеосервер Resolume Arena", spec: "4K, DMX-sync, VJ, маппинг", photo: "img/catalog/r5/video-server.jpg" },
       { name: "Видеомикшер Blackmagic ATEM 4 M/E", spec: "4K, 40 входов, DVE, Multiview", photo: "img/catalog/r5/video-atem.jpg" },
       { name: "ТВ-панели 50–100″", spec: "50 / 65 / 75 / 86 / 92 / 100 дюймов, 4K", photo: "img/catalog/r5/video-tv.jpg" },
