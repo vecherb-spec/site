@@ -79,20 +79,10 @@ button {
   gap: 24px;
 }
 
-.logo {
-  display: inline-flex;
-  align-items: baseline;
-  font-family: var(--display);
-  font-size: 26px;
-  letter-spacing: 0.07em;
-  line-height: 1;
-  color: #fff;
-  white-space: nowrap;
-  min-width: 0;
-}
-
-.logo span {
-  color: var(--cyan);
+.logo img {
+  height: 28.8px;
+  width: auto;
+  filter: brightness(0) invert(1);
 }
 
 .nav {
@@ -965,10 +955,11 @@ button {
 }
 
 .footer .logo {
-  display: inline-flex;
+  display: inline-block;
   margin-bottom: 16px;
-  font-size: 24px;
 }
+
+.footer .logo img { height: 25.2px; }
 
 .footer p,
 .footer a {
@@ -1040,7 +1031,6 @@ button {
   .header__cta,
   .header__phone { display: none; }
   .burger { display: block; flex-shrink: 0; }
-  .logo { font-size: 22px; letter-spacing: 0.05em; }
 
   .wrap {
     padding-inline: 1.2rem;
