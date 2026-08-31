@@ -42,7 +42,10 @@ const renderCatalog = (id) => {
     .map(
       (item) => `
       <article class="equip">
-        ${item.badge ? `<span class="equip__badge">${item.badge}</span>` : ""}
+        <div class="equip__media">
+          ${item.photo ? `<img src="${item.photo}" alt="" width="900" height="600" loading="lazy">` : ""}
+          ${item.badge ? `<span class="equip__badge">${item.badge}</span>` : ""}
+        </div>
         <h3>${item.name}</h3>
         <p>${item.spec}</p>
         <a href="#contact">Запросить цену <span aria-hidden="true">→</span></a>
