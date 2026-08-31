@@ -5,7 +5,7 @@ window.CATALOG = [
       { name: "Линейный массив D&B audiotechnik Q1", spec: "Line Array, 10″ + 1,4″, 143 дБ пик", badge: "Топ", photo: "img/catalog/r5/sound-linearray-1.jpg" },
       { name: "Линейный массив Meyer Sound Melodie", spec: "Line Array, 4×5″ + 1″, 137 дБ пик", photo: "img/catalog/r5/sound-linearray-2.jpg" },
       { name: "Акустическая система D&B audiotechnik Q7", spec: "2-полос, 12″ + 1,4″, 136 дБ пик", photo: "img/catalog/r5/sound-speaker-1.jpg" },
-      { name: "Акустическая система Turbosound IP3000", spec: "2-полос, 15″ + 1,35″, 140 дБ пик", photo: "img/catalog/r5/sound-speaker-2.jpg" },
+      { name: "Акустическая система Turbosound IP3000", spec: "колонка 2×12″ + 16×3,5″, 2000 Вт", photo: "img/catalog/r6/sound-speaker-2.jpg" },
       { name: "Микшерный пульт Waves LV1", spec: "64 канала, SuperRack, Dante / MADI", photo: "img/catalog/r5/sound-mixer-1.jpg" },
       { name: "Микшерный пульт Behringer Wing", spec: "48 каналов, 24 шины, 10″ дисплей", photo: "img/catalog/r5/sound-mixer-2.jpg" },
       { name: "Радиосистема Shure QLXD", spec: "UHF, 300 м, рэковый приёмник", photo: "img/catalog/r5/sound-wireless.jpg" },
