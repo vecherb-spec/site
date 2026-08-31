@@ -41,7 +41,7 @@ window.CATALOG = [
   {
     id: "stage",
     items: [
-      { name: "Сценический комплекс", spec: "6×4 / 8×6 / 10×8 / 12×10 м, модульная сборка", badge: "Хит", photo: "img/catalog/r5/stage-complex.jpg" },
+      { name: "Сценический комплекс", spec: "крыша, порталы, 6×4 / 8×6 / 10×8 / 12×10 м", badge: "Хит", photo: "img/catalog/r8/stage-complex.jpg" },
       { name: "Сценический подиум 2×1 м", spec: "Высота 0.4–1.0 м, 750 кг/м²", photo: "img/catalog/r5/stage-podium.jpg" },
       { name: "Лебёдка сценическая", spec: "500 / 1000 кг, моторизованная, DMX", photo: "img/catalog/r5/stage-hoist.jpg" },
       { name: "Ферма сценическая Prolyte H30", spec: "30×30 см, 400 кг/м, алюминий", photo: "img/catalog/r5/stage-truss.jpg" },
