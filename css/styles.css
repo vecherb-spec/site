@@ -750,6 +750,79 @@ button {
 .contact-card--cyan .contact-card__value { color: #67e8f9; }
 .contact-card--orange .contact-card__value { color: #fb923c; }
 
+.lead-form {
+  max-width: 720px;
+  margin: 0 auto 56px;
+  padding: 28px;
+  text-align: left;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.lead-form__title {
+  font-family: var(--display);
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.lead-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.lead-form label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lead-form input,
+.lead-form textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text);
+  background: rgb(8 9 15 / 0.7);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+
+.lead-form input:focus,
+.lead-form textarea:focus {
+  outline: none;
+  border-color: var(--cyan);
+}
+
+.lead-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.lead-form .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.lead-form__hint {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  text-transform: none;
+  text-align: center;
+}
+
 .contact__meta {
   display: flex;
   justify-content: center;
@@ -893,6 +966,10 @@ button {
   .tabs button {
     padding: 8px 12px;
     font-size: 0.8rem;
+  }
+
+  .lead-form__row {
+    grid-template-columns: 1fr;
   }
 
   .section { padding: 72px 0; }

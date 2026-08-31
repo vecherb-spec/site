@@ -71,6 +71,24 @@ catalogGrid?.addEventListener("click", (event) => {
 
 renderCatalog("sound");
 
+const leadForm = document.getElementById("leadForm");
+leadForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const name = document.getElementById("leadName")?.value.trim() || "";
+  const contact = document.getElementById("leadContact")?.value.trim() || "";
+  const message = document.getElementById("leadMessage")?.value.trim() || "";
+  const body = [
+    `Имя: ${name}`,
+    `Связь: ${contact}`,
+    "",
+    message,
+  ].join("\n");
+  const href = `mailto:info@medialive.ru?subject=${encodeURIComponent("Заявка на КП — Medialive")}&body=${encodeURIComponent(body)}`;
+  window.location.href = href;
+  const hint = document.getElementById("leadHint");
+  if (hint) hint.textContent = "Если почта не открылась — напишите на info@medialive.ru или в Telegram @medialiveled.";
+});
+
 const counters = document.querySelectorAll("[data-count]");
 if (counters.length) {
   const animate = (el) => {

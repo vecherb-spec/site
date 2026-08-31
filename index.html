@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=7">
+  <link rel="stylesheet" href="css/styles.css?v=8">
 </head>
 <body>
   <header class="header" id="header">
@@ -245,6 +245,25 @@
             <span class="contact-card__value">+7 (926) 335-39-35</span>
           </a>
         </div>
+        <form class="lead-form" id="leadForm" action="mailto:info@medialive.ru" method="post" enctype="text/plain">
+          <p class="lead-form__title">Заявка на КП</p>
+          <div class="lead-form__row">
+            <label>
+              Имя
+              <input type="text" name="name" id="leadName" autocomplete="name" required placeholder="Как к вам обращаться">
+            </label>
+            <label>
+              Телефон или Telegram
+              <input type="text" name="contact" id="leadContact" autocomplete="tel" required placeholder="+7… или @username">
+            </label>
+          </div>
+          <label>
+            Мероприятие
+            <textarea name="message" id="leadMessage" rows="4" required placeholder="Дата, площадка, что нужно: звук, свет, экран, трансляция"></textarea>
+          </label>
+          <button class="btn btn--cyan btn--lg" type="submit">Отправить заявку <span aria-hidden="true">→</span></button>
+          <p class="lead-form__hint" id="leadHint">Письмо откроется в почте. Или сразу звоните / пишите в Telegram.</p>
+        </form>
         <div class="contact__meta">
           <p><a href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B%2C%2022%D1%811" target="_blank" rel="noopener noreferrer">ул. Свободы, 22с1, Москва</a></p>
           <p>Работаем 7 дней в неделю, 24/7</p>
@@ -264,6 +283,7 @@
         <nav>
           <a href="#services">Услуги</a>
           <a href="#catalog">Каталог</a>
+          <a href="#about">О нас</a>
           <a href="#contact">Контакты</a>
         </nav>
       </div>
