@@ -612,6 +612,7 @@ button {
   height: 100%;
   object-fit: cover;
   display: block;
+  image-rendering: auto;
 }
 
 .equip__badge {
