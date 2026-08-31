@@ -43,7 +43,7 @@ const renderCatalog = (id) => {
       (item) => `
       <article class="equip">
         <div class="equip__media">
-          ${item.photo ? `<img src="${item.photo}" alt="${item.name}" width="1536" height="1024" loading="lazy">` : ""}
+          ${item.photo ? `<img src="${item.photo}" alt="${item.name}" width="1200" height="800" loading="lazy">` : ""}
           ${item.badge ? `<span class="equip__badge">${item.badge}</span>` : ""}
         </div>
         <h3>${item.name}</h3>
