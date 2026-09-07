@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://mc.yandex.ru" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=13">
+  <link rel="stylesheet" href="css/styles.css?v=14">
   <!-- catalog photos r9 -->
   <script type="application/ld+json">
   {
@@ -97,7 +97,7 @@
         <p class="hero__lead">Аренда профессионального оборудования и полное техническое сопровождение мероприятий любого масштаба — от корпоратива до масштабного концерта.</p>
         <div class="hero__actions">
           <a class="btn btn--cyan btn--lg" href="#catalog">Каталог оборудования <span aria-hidden="true">→</span></a>
-          <a class="btn btn--ghost btn--lg" href="#contact"><span class="dot-orange" aria-hidden="true"></span>Получить КП</a>
+          <a class="btn btn--ghost btn--lg" href="#popup:marquiz_68663cff9e2f3a0019760c73"><span class="dot-orange" aria-hidden="true"></span>Получить КП</a>
         </div>
         <ul class="hero__stats">
           <li><strong>500+</strong><span>Мероприятий</span></li>
@@ -273,29 +273,9 @@
             <span class="contact-card__value">+7 (926) 335-39-35</span>
           </a>
         </div>
-        <form class="lead-form" id="leadForm" action="mailto:info@medialive.ru" method="post" enctype="text/plain">
-          <p class="lead-form__title">Заявка на КП</p>
-          <div class="lead-form__row">
-            <label>
-              Имя
-              <input type="text" name="name" id="leadName" autocomplete="name" required placeholder="Как к вам обращаться">
-            </label>
-            <label>
-              Телефон или Telegram
-              <input type="text" name="contact" id="leadContact" autocomplete="tel" required placeholder="+7… или @username">
-            </label>
-          </div>
-          <label>
-            Мероприятие
-            <textarea name="message" id="leadMessage" rows="4" required placeholder="Дата, площадка, что нужно: звук, свет, экран, трансляция"></textarea>
-          </label>
-          <button class="btn btn--cyan btn--lg" type="submit">Отправить заявку <span aria-hidden="true">→</span></button>
-          <label class="lead-form__consent">
-            <input type="checkbox" id="leadConsent" name="consent" value="yes" required>
-            <span>Согласен на <a href="privacy.html">обработку персональных данных</a></span>
-          </label>
-          <p class="lead-form__hint" id="leadHint">После отправки откроется страница «спасибо». Можно сразу позвонить или написать в Telegram.</p>
-        </form>
+        <div class="contact__cta">
+          <a class="btn btn--cyan btn--lg" href="#popup:marquiz_68663cff9e2f3a0019760c73">Получить КП <span aria-hidden="true">→</span></a>
+        </div>
         <div class="contact__meta">
           <p><a href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B%2C%2022%D1%811" target="_blank" rel="noopener noreferrer">ул. Свободы, 22с1, Москва</a></p>
           <p>Работаем 7 дней в неделю, 24/7</p>
@@ -380,7 +360,7 @@
   <script src="js/site-config.js?v=2"></script>
   <script src="js/analytics.js?v=2"></script>
   <script src="js/catalog.js?v=r9"></script>
-  <script src="js/main.js?v=r10"></script>
+  <script src="js/main.js?v=r11"></script>
   <noscript><div><img src="https://mc.yandex.ru/watch/101805439" style="position:absolute;left:-9999px" alt=""></div></noscript>
 </body>
 </html>

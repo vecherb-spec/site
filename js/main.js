@@ -85,22 +85,6 @@ cookieOk?.addEventListener("click", () => {
   if (cookieBar) cookieBar.hidden = true;
 });
 
-const leadForm = document.getElementById("leadForm");
-leadForm?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const consent = document.getElementById("leadConsent");
-  if (consent && !consent.checked) {
-    consent.focus();
-    return;
-  }
-  const name = document.getElementById("leadName")?.value.trim() || "";
-  const contact = document.getElementById("leadContact")?.value.trim() || "";
-  const message = document.getElementById("leadMessage")?.value.trim() || "";
-  sessionStorage.setItem("leadDraft", JSON.stringify({ name, contact, message }));
-  if (typeof window.trackGoal === "function") window.trackGoal("lead");
-  window.location.href = "thanks.html";
-});
-
 const counters = document.querySelectorAll("[data-count]");
 if (counters.length) {
   const animate = (el) => {
