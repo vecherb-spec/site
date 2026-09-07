@@ -36,6 +36,43 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
+/**
+ * Marquiz binds only links that exist at init. Catalog tabs replace innerHTML,
+ * so new «Запросить цену» buttons have no listeners. Capture-phase delegation
+ * opens the quiz on every tab and every button, including after tab switches.
+ */
+function openMarquiz(id) {
+  if (window.Marquiz && typeof window.Marquiz.showModal === "function") {
+    window.Marquiz.showModal(id);
+    return;
+  }
+  let n = 0;
+  const t = setInterval(() => {
+    n += 1;
+    if (window.Marquiz && typeof window.Marquiz.showModal === "function") {
+      window.Marquiz.showModal(id);
+      clearInterval(t);
+    } else if (n > 50) {
+      clearInterval(t);
+    }
+  }, 100);
+}
+
+document.addEventListener(
+  "click",
+  (event) => {
+    const link = event.target.closest && event.target.closest('a[href^="#popup:marquiz_"]');
+    if (!link) return;
+    event.preventDefault();
+    event.stopPropagation();
+    const href = link.getAttribute("href") || "";
+    const id = href.replace(/^#popup:marquiz_/, "");
+    if (!id) return;
+    openMarquiz(id);
+  },
+  true
+);
+
 const renderCatalog = (id) => {
   const group = (window.CATALOG || []).find((item) => item.id === id);
   if (!catalogGrid || !group) return;
