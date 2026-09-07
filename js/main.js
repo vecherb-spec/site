@@ -27,7 +27,8 @@ burger?.addEventListener("click", () => {
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     const id = link.getAttribute("href");
-    const target = id && document.querySelector(id);
+    if (!id || id.startsWith("#popup:")) return;
+    const target = document.querySelector(id);
     if (!target) return;
     event.preventDefault();
     closeMenu();
@@ -48,7 +49,7 @@ const renderCatalog = (id) => {
         </div>
         <h3>${item.name}</h3>
         <p>${item.spec}</p>
-        <a href="#contact">Запросить цену <span aria-hidden="true">→</span></a>
+        <a href="#popup:marquiz_68663cff9e2f3a0019760c73">Запросить цену <span aria-hidden="true">→</span></a>
       </article>`
     )
     .join("");
@@ -63,13 +64,6 @@ document.querySelectorAll(".tabs button").forEach((button) => {
     });
     renderCatalog(button.dataset.tab);
   });
-});
-
-catalogGrid?.addEventListener("click", (event) => {
-  const link = event.target.closest('a[href="#contact"]');
-  if (!link) return;
-  event.preventDefault();
-  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
 });
 
 renderCatalog("sound");
