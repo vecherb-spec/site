@@ -26,8 +26,8 @@
       <h1 class="h-display">СПАСИБО, <span class="is-cyan">ЗАЯВКА ПРИНЯТА</span></h1>
       <p class="lead lead--center">Мы свяжемся с вами в течение часа в рабочее время. Можно сразу позвонить, написать в Telegram или открыть письмо на info@medialive.ru.</p>
       <div class="hero__actions" style="justify-content:center">
-        <a class="btn btn--cyan btn--lg" href="tel:+79263353935" data-goal="phone">Позвонить</a>
-        <a class="btn btn--ghost btn--lg" href="https://t.me/medialiveled" target="_blank" rel="noopener noreferrer" data-goal="telegram">Telegram</a>
+        <a class="btn btn--cyan btn--lg" href="tel:+79263353935" data-goal="phone_click">Позвонить</a>
+        <a class="btn btn--ghost btn--lg" href="https://t.me/medialiveled" target="_blank" rel="noopener noreferrer" data-goal="telegram_click">Telegram</a>
         <a class="btn btn--ghost-orange btn--lg" id="openMail" href="mailto:info@medialive.ru">Открыть письмо</a>
       </div>
     </div>
@@ -55,22 +55,8 @@
   </script>
   <!-- Marquiz script end -->
 
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
-      (function(m,e,t,r,i,k,a){
-          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-          m[i].l=1*new Date();
-          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112349953', 'ym');
-
-      ym(112349953, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-  </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/112349953" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
-
-  <script src="js/site-config.js"></script>
-  <script src="js/analytics.js"></script>
+  <script src="js/site-config.js?v=3"></script>
+  <script src="js/analytics.js?v=3"></script>
   <script>
     (function () {
       const raw = sessionStorage.getItem("leadDraft");
@@ -83,6 +69,5 @@
       } catch (e) {}
     })();
   </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/101805439" style="position:absolute;left:-9999px" alt=""></div></noscript>
 </body>
 </html>

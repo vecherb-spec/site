@@ -42,16 +42,17 @@ python3 -m http.server 8080
 - неотмеченный чекбокс согласия у формы
 - cookie-уведомление про Метрику
 - реквизиты ООО «МЕДИАЛАЙВ» (ИНН 9714076643, ОГРН 1257700258144)
-- счётчик Метрики `101805439` (тот же, что на medialive.ru)
+- новый основной счётчик Метрики для `medialive.tech` задаётся в `js/site-config.js` (`metrikaId: 114059004`)
 - страница конверсии `thanks.html`
 
 **Что сделать в кабинетах Яндекса (без этого реклама не поедет):**
 
-1. [Метрика](https://metrika.yandex.ru/) → счётчик 101805439 → **Адреса сайта** → добавить `https://medialive.tech/`
-2. Цели JavaScript: `lead` (форма), `phone`, `telegram`, `max`
-3. Цель «Посещение страницы»: `https://medialive.tech/thanks.html`
-4. [Вебмастер](https://webmaster.yandex.ru/) → добавить `medialive.tech`, код подтверждения вписать в `js/site-config.js` в `yandexVerification`
-5. Карточка в [Яндекс Бизнесе](https://business.yandex.ru/) с телефоном и адресом
-6. Директ: кампания на `https://medialive.tech/`, привязать счётчик, стратегия «Максимум конверсий» по цели `lead` или `thanks.html`
-7. Маркировка рекламы (ОРД / токен в объявлениях) — это в кабинете Директа, не на сайте
+1. [Метрика](https://metrika.yandex.ru/) → счётчик `114059004` → **Адреса сайта**: `https://medialive.tech/`.
+2. JavaScript-цели уже созданы с точными идентификаторами: `quiz_submit`, `phone_click`, `telegram_click`, `max_click`.
+3. Цель «Посещение страницы»: `https://medialive.tech/thanks.html` — только если она нужна в стратегии отдельно от квиза.
+4. [Вебмастер](https://webmaster.yandex.ru/) → добавить `medialive.tech`, код подтверждения вписать в `js/site-config.js` в `yandexVerification`.
+5. Карточка в [Яндекс Бизнесе](https://business.yandex.ru/) с телефоном и адресом.
+6. Директ: кампания на `https://medialive.tech/`, привязать счётчик `114059004`, стратегия «Максимум конверсий» по цели `quiz_submit`.
+7. MAX-ссылка для номера `+7 (926) 335-39-35` задана в `js/site-config.js` (`maxUrl`): `https://max.ru/u/f9LHodD0cOKuWxN5EAXtxBujEQQCTNaNx9SSYtsJjp6ZBHkkSsSqgNm191s`.
+8. Маркировка рекламы (ОРД / токен в объявлениях) — это в кабинете Директа, не на сайте.
 

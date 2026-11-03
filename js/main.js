@@ -3,8 +3,15 @@ const burger = document.getElementById("burger");
 const navMobile = document.getElementById("navMobile");
 const catalogGrid = document.getElementById("catalogGrid");
 const year = document.getElementById("year");
+const siteConfig = window.SITE || {};
+const marquizId = siteConfig.marquizId || "68663cff9e2f3a0019760c73";
+const maxUrl = siteConfig.maxUrl || "https://max.ru/u/f9LHodD0cOKuWxN5EAXtxBujEQQCTNaNx9SSYtsJjp6ZBHkkSsSqgNm191s";
 
 if (year) year.textContent = String(new Date().getFullYear());
+
+document.querySelectorAll('[data-contact="max"]').forEach((link) => {
+  link.href = maxUrl;
+});
 
 window.addEventListener(
   "scroll",
@@ -66,7 +73,7 @@ document.addEventListener(
     event.preventDefault();
     event.stopPropagation();
     const href = link.getAttribute("href") || "";
-    const id = href.replace(/^#popup:marquiz_/, "");
+    const id = href.replace(/^#popup:marquiz_/, "") || marquizId;
     if (!id) return;
     openMarquiz(id);
   },
@@ -86,7 +93,7 @@ const renderCatalog = (id) => {
         </div>
         <h3>${item.name}</h3>
         <p>${item.spec}</p>
-        <a href="#popup:marquiz_68663cff9e2f3a0019760c73">Запросить цену <span aria-hidden="true">→</span></a>
+        <a href="#popup:marquiz_${marquizId}">Запросить цену <span aria-hidden="true">→</span></a>
       </article>`
     )
     .join("");
@@ -104,13 +111,6 @@ document.querySelectorAll(".tabs button").forEach((button) => {
 });
 
 renderCatalog("sound");
-
-document.addEventListener("click", (event) => {
-  const goalLink = event.target.closest("[data-goal]");
-  if (goalLink && typeof window.trackGoal === "function") {
-    window.trackGoal(goalLink.getAttribute("data-goal"));
-  }
-});
 
 const cookieBar = document.getElementById("cookieBar");
 const cookieOk = document.getElementById("cookieOk");
