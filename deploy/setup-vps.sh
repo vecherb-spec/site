@@ -23,7 +23,35 @@ rsync -a --delete \
   --exclude "README.md" \
   "${REPO_ROOT}/" "${SITE_ROOT}/"
 
-sed "s/YOUR_DOMAIN/${DOMAIN}/g" "${REPO_ROOT}/deploy/nginx.conf" > "${NGINX_SITE}"
+cat > "${NGINX_SITE}" <<NGINX
+server {
+    listen 80;
+    listen [::]:80;
+    server_name ${DOMAIN} www.${DOMAIN};
+
+    root ${SITE_ROOT};
+    index index.html;
+
+    error_page 404 /404.html;
+
+    location /.well-known/acme-challenge/ {
+        root ${SITE_ROOT};
+    }
+
+    location / {
+        try_files \$uri \$uri/ =404;
+        add_header Cache-Control "no-cache, must-revalidate";
+        add_header X-Content-Type-Options nosniff always;
+        add_header Referrer-Policy strict-origin-when-cross-origin always;
+    }
+
+    location ~* \.(css|js|svg|ico|png|jpg|jpeg|webp|woff2)$ {
+        expires 7d;
+        add_header Cache-Control "public";
+        access_log off;
+    }
+}
+NGINX
 ln -sfn "${NGINX_SITE}" /etc/nginx/sites-enabled/medialive
 rm -f /etc/nginx/sites-enabled/default
 
@@ -39,5 +67,7 @@ fi
 echo
 echo "Сайт разложен в ${SITE_ROOT} и слушает 80 порт."
 echo "В DNS ${DOMAIN} и www.${DOMAIN} поставьте A-запись на IP этого VPS."
-echo "Когда DNS дойдёт, выпустите сертификат:"
-echo "  sudo certbot --nginx -d ${DOMAIN} -d www.${DOMAIN}"
+echo "Когда DNS дойдёт, выпустите сертификат и примените HTTPS-конфиг:"
+echo "  sudo certbot certonly --webroot -w ${SITE_ROOT} -d ${DOMAIN} -d www.${DOMAIN}"
+echo "  sudo sed 's/YOUR_DOMAIN/${DOMAIN}/g' ${REPO_ROOT}/deploy/nginx.conf | sudo tee ${NGINX_SITE} >/dev/null"
+echo "  sudo nginx -t && sudo systemctl reload nginx"
