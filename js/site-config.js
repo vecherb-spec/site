@@ -7,8 +7,7 @@ window.SITE = {
   yandexVerification: "",
   marquizId: "68663cff9e2f3a0019760c73",
   /*
-   * MAX не публикует URL-формат прямого чата по номеру 79263353935.
-   * Замените на профиль/инвайт/чат-ссылку из приложения, когда она будет получена.
+   * Профиль MAX для номера 79263353935.
    */
-  maxUrl: "https://web.max.ru/",
+  maxUrl: "https://max.ru/u/f9LHodD0cOKuWxN5EAXtxBujEQQCTNaNx9SSYtsJjp6ZBHkkSsSqgNm191s",
 };

@@ -5,7 +5,7 @@ const catalogGrid = document.getElementById("catalogGrid");
 const year = document.getElementById("year");
 const siteConfig = window.SITE || {};
 const marquizId = siteConfig.marquizId || "68663cff9e2f3a0019760c73";
-const maxUrl = siteConfig.maxUrl || "https://web.max.ru/";
+const maxUrl = siteConfig.maxUrl || "https://max.ru/u/f9LHodD0cOKuWxN5EAXtxBujEQQCTNaNx9SSYtsJjp6ZBHkkSsSqgNm191s";
 
 if (year) year.textContent = String(new Date().getFullYear());
 

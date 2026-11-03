@@ -53,6 +53,6 @@ python3 -m http.server 8080
 4. [Вебмастер](https://webmaster.yandex.ru/) → добавить `medialive.tech`, код подтверждения вписать в `js/site-config.js` в `yandexVerification`.
 5. Карточка в [Яндекс Бизнесе](https://business.yandex.ru/) с телефоном и адресом.
 6. Директ: кампания на `https://medialive.tech/`, привязать счётчик `114059004`, стратегия «Максимум конверсий» по цели `quiz_submit`.
-7. В MAX получить профильную, инвайт- или чат-ссылку для номера `+7 (926) 335-39-35` и заменить `maxUrl` в `js/site-config.js`. Документированного формата прямой ссылки по номеру телефона у MAX нет; текущий fallback открывает веб-клиент `https://web.max.ru/`.
+7. MAX-ссылка для номера `+7 (926) 335-39-35` задана в `js/site-config.js` (`maxUrl`): `https://max.ru/u/f9LHodD0cOKuWxN5EAXtxBujEQQCTNaNx9SSYtsJjp6ZBHkkSsSqgNm191s`.
 8. Маркировка рекламы (ОРД / токен в объявлениях) — это в кабинете Директа, не на сайте.
 
