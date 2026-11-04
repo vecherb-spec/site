@@ -5,7 +5,6 @@ window.SITE = {
    */
   metrikaId: 114059004,
   yandexVerification: "",
-  marquizId: "68663cff9e2f3a0019760c73",
   /*
    * Профиль MAX для номера 79263353935.
    */

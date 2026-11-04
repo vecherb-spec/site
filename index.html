@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://mc.yandex.ru" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=14">
+  <link rel="stylesheet" href="css/styles.css?v=18">
   <!-- catalog photos r9 -->
   <script type="application/ld+json">
   {
@@ -78,6 +78,21 @@
 
   <main>
     <section class="hero" id="top">
+      <div class="hero__photo hero__photo--primary" aria-hidden="true">
+        <picture>
+          <source type="image/webp" srcset="img/hero/hero-main-480w.webp 480w, img/hero/hero-main-768w.webp 768w, img/hero/hero-main-960w.webp 960w, img/hero/hero-main-1280w.webp 1280w, img/hero/hero-main-1920w.webp 1920w" sizes="100vw">
+          <source type="image/jpeg" srcset="img/hero/hero-main-480w.jpg 480w, img/hero/hero-main-768w.jpg 768w, img/hero/hero-main-960w.jpg 960w, img/hero/hero-main-1280w.jpg 1280w, img/hero/hero-main-1920w.jpg 1920w" sizes="100vw">
+          <img src="img/hero/hero-main-1280w.jpg" alt="" width="1920" height="1281" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+      <div class="hero__photo hero__photo--alt" aria-hidden="true">
+        <picture>
+          <source type="image/webp" srcset="img/hero/hero-alt-480w.webp 480w, img/hero/hero-alt-768w.webp 768w, img/hero/hero-alt-960w.webp 960w, img/hero/hero-alt-1280w.webp 1280w, img/hero/hero-alt-1920w.webp 1920w" sizes="100vw">
+          <source type="image/jpeg" srcset="img/hero/hero-alt-480w.jpg 480w, img/hero/hero-alt-768w.jpg 768w, img/hero/hero-alt-960w.jpg 960w, img/hero/hero-alt-1280w.jpg 1280w, img/hero/hero-alt-1920w.jpg 1920w" sizes="100vw">
+          <img src="img/hero/hero-alt-1280w.jpg" alt="" width="1920" height="1281" decoding="async">
+        </picture>
+      </div>
+      <div class="hero__scrim" aria-hidden="true"></div>
       <div class="hero__grid" aria-hidden="true"></div>
       <div class="hero__glow hero__glow--cyan" aria-hidden="true"></div>
       <div class="hero__glow hero__glow--orange" aria-hidden="true"></div>
@@ -97,7 +112,7 @@
         <p class="hero__lead">Аренда профессионального оборудования и полное техническое сопровождение мероприятий любого масштаба — от корпоратива до масштабного концерта.</p>
         <div class="hero__actions">
           <a class="btn btn--cyan btn--lg" href="#catalog">Каталог оборудования <span aria-hidden="true">→</span></a>
-          <a class="btn btn--ghost btn--lg" href="#popup:marquiz_68663cff9e2f3a0019760c73"><span class="dot-orange" aria-hidden="true"></span>Получить КП</a>
+          <a class="btn btn--ghost btn--lg" href="#quiz"><span class="dot-orange" aria-hidden="true"></span>Получить КП</a>
         </div>
         <ul class="hero__stats">
           <li><strong>500+</strong><span>Мероприятий</span></li>
@@ -112,55 +127,103 @@
       <div class="wrap">
         <p class="pill pill--cyan"><i></i>Наши услуги</p>
         <h2 class="h-display">ЧТО МЫ <span class="is-cyan">ДЕЛАЕМ</span></h2>
-        <p class="lead">Полный спектр технического обеспечения — от аренды одного микрофона до комплексной организации трансляции на многотысячную аудиторию.</p>
+        <p class="lead">Полный спектр технического обеспечения — от аренды одного микрофона до комплексной организации мероприятий любого масштаба.</p>
         <div class="services">
-          <article class="card card--cyan">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.08"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
-            </div>
-            <h3>ЗВУКОВОЕ ОБОРУДОВАНИЕ</h3>
-            <p>Профессиональные акустические системы, микрофоны, микшерные пульты и мониторинг для мероприятий любого масштаба.</p>
-            <div class="tags"><span>Line Array</span><span>Микрофоны</span><span>Пульты</span><span>Мониторы</span></div>
-          </article>
-          <article class="card card--orange">
+          <article class="card card--cyan card--photo">
+            <picture class="card__bg" aria-hidden="true">
+              <source type="image/webp" srcset="img/services/service-concept-480w.webp 480w, img/services/service-concept-768w.webp 768w, img/services/service-concept-960w.webp 960w, img/services/service-concept-1280w.webp 1280w, img/services/service-concept-1920w.webp 1920w" sizes="(max-width: 720px) 100vw, (max-width: 960px) 50vw, 33vw">
+              <source type="image/jpeg" srcset="img/services/service-concept-480w.jpg 480w, img/services/service-concept-768w.jpg 768w, img/services/service-concept-960w.jpg 960w, img/services/service-concept-1280w.jpg 1280w, img/services/service-concept-1920w.jpg 1920w" sizes="(max-width: 720px) 100vw, (max-width: 960px) 50vw, 33vw">
+              <img src="img/services/service-concept-960w.jpg" alt="" width="960" height="640" loading="lazy" decoding="async">
+            </picture>
+            <div class="card__shade" aria-hidden="true"></div>
+            <div class="card__content">
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 1 4 12.7V17H8v-2.3A7 7 0 0 1 12 2z"/></svg>
             </div>
-            <h3>СВЕТОВОЕ ОБОРУДОВАНИЕ</h3>
-            <p>Moving Head прожекторы, LED панели, дымогенераторы и системы управления светом для создания незабываемой атмосферы.</p>
-            <div class="tags"><span>Moving Head</span><span>LED Wash</span><span>Стробы</span><span>DMX</span></div>
-          </article>
-          <article class="card card--cyan">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-3v10l-6-3"/><circle cx="9" cy="12" r="2.2"/></svg>
+            <h3>РАЗРАБОТКА КОНЦЕПЦИИ МЕРОПРИЯТИЯ</h3>
+            <p>Идея и сценарий под цели заказчика — от эскиза до реализации.</p>
+            <div class="tags"><span>Идея</span><span>Сценарий</span><span>Стиль</span><span>Запуск</span></div>
             </div>
-            <h3>ВИДЕООБОРУДОВАНИЕ</h3>
-            <p>Профессиональные видеокамеры, проекторы, видеомикшеры и оборудование для многокамерной съёмки.</p>
-            <div class="tags"><span>Камеры</span><span>Проекторы</span><span>Switcher</span><span>Мониторинг</span></div>
           </article>
-          <article class="card card--orange">
+          <article class="card card--orange card--photo">
+            <picture class="card__bg" aria-hidden="true">
+              <source type="image/webp" srcset="img/services/service-design-480w.webp 480w, img/services/service-design-768w.webp 768w, img/services/service-design-960w.webp 960w, img/services/service-design-1280w.webp 1280w, img/services/service-design-1920w.webp 1920w" sizes="(max-width: 720px) 100vw, (max-width: 960px) 50vw, 33vw">
+              <source type="image/jpeg" srcset="img/services/service-design-480w.jpg 480w, img/services/service-design-768w.jpg 768w, img/services/service-design-960w.jpg 960w, img/services/service-design-1280w.jpg 1280w, img/services/service-design-1920w.jpg 1920w" sizes="(max-width: 720px) 100vw, (max-width: 960px) 50vw, 33vw">
+              <img src="img/services/service-design-960w.jpg" alt="" width="960" height="640" loading="lazy" decoding="async">
+            </picture>
+            <div class="card__shade" aria-hidden="true"></div>
+            <div class="card__content">
             <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8"/><path d="M12 18v4"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20"/><path d="M4 20V8l8-4 8 4v12"/><path d="M8 20v-6h8v6"/><path d="M12 4v4"/></svg>
             </div>
-            <h3>СВЕТОДИОДНЫЕ ЭКРАНЫ</h3>
-            <p>Аренда LED-экранов с высоким разрешением для интерьера и экстерьера. Пиксельный шаг от 2 до 10 мм.</p>
-            <div class="tags"><span>Indoor P2</span><span>Outdoor P4</span><span>Curved LED</span><span>Контент</span></div>
+            <h3>ТЕХНИЧЕСКОЕ ПРОЕКТИРОВАНИЕ МЕРОПРИЯТИЙ</h3>
+            <p>Чертежи и макеты, планы площадки и расчёт оборудования.</p>
+            <div class="tags"><span>Чертежи</span><span>Макеты</span><span>Планы</span><span>Расчёт</span></div>
+            </div>
           </article>
-          <article class="card card--cyan">
+          <article class="card card--cyan card--photo">
+            <picture class="card__bg" aria-hidden="true">
+              <source type="image/webp" srcset="img/services/service-viz3d-480w.webp 480w, img/services/service-viz3d-768w.webp 768w, img/services/service-viz3d-960w.webp 960w, img/services/service-viz3d-1280w.webp 1280w, img/services/service-viz3d-1920w.webp 1920w" sizes="(max-width: 720px) 100vw, (max-width: 960px) 50vw, 33vw">
+              <source type="image/jpeg" srcset="img/services/service-viz3d-480w.jpg 480w, img/services/service-viz3d-768w.jpg 768w, img/services/service-viz3d-960w.jpg 960w, img/services/service-viz3d-1280w.jpg 1280w, img/services/service-viz3d-1920w.jpg 1920w" sizes="(max-width: 720px) 100vw, (max-width: 960px) 50vw, 33vw">
+              <img src="img/services/service-viz3d-960w.jpg" alt="" width="960" height="640" loading="lazy" decoding="async">
+            </picture>
+            <div class="card__shade" aria-hidden="true"></div>
+            <div class="card__content">
             <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18"/><path d="M5 21V11l7-6 7 6v10"/><path d="M10 21v-6h4v6"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5z"/><path d="m3 7 9 5 9-5"/><path d="M12 12v10"/></svg>
             </div>
-            <h3>СЦЕНИЧЕСКИЕ КОНСТРУКЦИИ</h3>
-            <p>Ферменные системы, подиумы, rig-подъёмники и сценические риги для монтажа оборудования на высоте.</p>
-            <div class="tags"><span>Фермы</span><span>Подиумы</span><span>Риги</span><span>Ограждения</span></div>
+            <h3>3D-ВИЗУАЛИЗАЦИЯ МЕРОПРИЯТИЯ</h3>
+            <p>3D-модель площадки со сценой, светом и экранами до начала монтажа.</p>
+            <div class="tags"><span>3D</span><span>Сцена</span><span>Свет</span><span>Экраны</span></div>
+            </div>
           </article>
-          <article class="card card--orange">
+          <article class="card card--orange card--photo">
+            <picture class="card__bg" aria-hidden="true">
+              <source type="image/webp" srcset="img/services/service-video-480w.webp 480w, img/services/service-video-768w.webp 768w, img/services/service-video-960w.webp 960w, img/services/service-video-1280w.webp 1280w, img/services/service-video-1920w.webp 1920w" sizes="(max-width: 720px) 100vw, (max-width: 960px) 50vw, 33vw">
+              <source type="image/jpeg" srcset="img/services/service-video-480w.jpg 480w, img/services/service-video-768w.jpg 768w, img/services/service-video-960w.jpg 960w, img/services/service-video-1280w.jpg 1280w, img/services/service-video-1920w.jpg 1920w" sizes="(max-width: 720px) 100vw, (max-width: 960px) 50vw, 33vw">
+              <img src="img/services/service-video-960w.jpg" alt="" width="960" height="640" loading="lazy" decoding="async">
+            </picture>
+            <div class="card__shade" aria-hidden="true"></div>
+            <div class="card__content">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8"/><path d="M12 18v4"/><path d="m10 8 5 3-5 3V8z"/></svg>
+            </div>
+            <h3>СОЗДАНИЕ ВИДЕОКОНТЕНТА</h3>
+            <p>Графика и видеоконтент для LED-экранов и проекции.</p>
+            <div class="tags"><span>Графика</span><span>Заставки</span><span>LED</span><span>Сцена</span></div>
+            </div>
+          </article>
+          <article class="card card--cyan card--photo">
+            <picture class="card__bg" aria-hidden="true">
+              <source type="image/webp" srcset="img/services/service-production-480w.webp 480w, img/services/service-production-768w.webp 768w, img/services/service-production-960w.webp 960w, img/services/service-production-1280w.webp 1280w, img/services/service-production-1920w.webp 1920w" sizes="(max-width: 720px) 100vw, (max-width: 960px) 50vw, 33vw">
+              <source type="image/jpeg" srcset="img/services/service-production-480w.jpg 480w, img/services/service-production-768w.jpg 768w, img/services/service-production-960w.jpg 960w, img/services/service-production-1280w.jpg 1280w, img/services/service-production-1920w.jpg 1920w" sizes="(max-width: 720px) 100vw, (max-width: 960px) 50vw, 33vw">
+              <img src="img/services/service-production-960w.jpg" alt="" width="960" height="640" loading="lazy" decoding="async">
+            </picture>
+            <div class="card__shade" aria-hidden="true"></div>
+            <div class="card__content">
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
             </div>
-            <h3>ПРЯМЫЕ ТРАНСЛЯЦИИ</h3>
-            <p>Организация онлайн-трансляций «под ключ»: многокамерное производство, стриминг на любые платформы.</p>
-            <div class="tags"><span>YouTube</span><span>VK Live</span><span>Zoom</span><span>Собственные CDN</span></div>
+            <h3>ТЕХНИЧЕСКИЙ ПРОДАКШН</h3>
+            <p>Технический директор на площадке: подрядчики и контроль монтажа.</p>
+            <div class="tags"><span>Директор</span><span>Монтаж</span><span>Контроль</span><span>Сроки</span></div>
+            </div>
+          </article>
+          <article class="card card--orange card--photo">
+            <picture class="card__bg" aria-hidden="true">
+              <source type="image/webp" srcset="img/services/service-staff-480w.webp 480w, img/services/service-staff-768w.webp 768w, img/services/service-staff-960w.webp 960w, img/services/service-staff-1280w.webp 1280w, img/services/service-staff-1920w.webp 1920w" sizes="(max-width: 720px) 100vw, (max-width: 960px) 50vw, 33vw">
+              <source type="image/jpeg" srcset="img/services/service-staff-480w.jpg 480w, img/services/service-staff-768w.jpg 768w, img/services/service-staff-960w.jpg 960w, img/services/service-staff-1280w.jpg 1280w, img/services/service-staff-1920w.jpg 1920w" sizes="(max-width: 720px) 100vw, (max-width: 960px) 50vw, 33vw">
+              <img src="img/services/service-staff-960w.jpg" alt="" width="960" height="640" loading="lazy" decoding="async" data-fallback="img/services/service-staff-alt-960w.jpg">
+            </picture>
+            <div class="card__shade" aria-hidden="true"></div>
+            <div class="card__content">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+            </div>
+            <h3>КВАЛИФИЦИРОВАННЫЙ ПЕРСОНАЛ</h3>
+            <p>Собственный штат: звукорежиссёры, художники по свету, видеоинженеры и техники.</p>
+            <div class="tags"><span>Звук</span><span>Свет</span><span>Видео</span><span>Техники</span></div>
+            </div>
           </article>
         </div>
       </div>
@@ -182,7 +245,7 @@
         <div class="catalog" id="catalogGrid"></div>
         <div class="catalog__more">
           <p>Не нашли нужное оборудование? Свяжитесь с нами — у нас есть ещё больше!</p>
-          <a class="btn btn--ghost-orange" href="#popup:marquiz_68663cff9e2f3a0019760c73">Запросить полный каталог <span aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost-orange" href="#quiz">Запросить полный каталог <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -274,7 +337,7 @@
           </a>
         </div>
         <div class="contact__cta">
-          <a class="btn btn--cyan btn--lg" href="#popup:marquiz_68663cff9e2f3a0019760c73">Получить КП <span aria-hidden="true">→</span></a>
+          <a class="btn btn--cyan btn--lg" href="#quiz">Получить КП <span aria-hidden="true">→</span></a>
         </div>
         <div class="contact__meta">
           <p><a href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B%2C%2022%D1%811" target="_blank" rel="noopener noreferrer">ул. Свободы, 22с1, Москва</a></p>
@@ -315,37 +378,102 @@
     </div>
   </footer>
 
+  <div class="quiz-modal" id="quizModal" hidden>
+    <div class="quiz-modal__overlay" data-quiz-action="close"></div>
+    <div class="quiz-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+      <button type="button" class="quiz-modal__close" data-quiz-action="close" aria-label="Закрыть">×</button>
+      <p class="quiz-modal__eyebrow">Расчёт за 1 час</p>
+      <h2 class="quiz-modal__title" id="quizTitle">Получить коммерческое предложение</h2>
+      <div class="quiz-modal__progress" aria-hidden="true">
+        <div class="quiz-modal__progress-track"><span class="quiz-modal__progress-bar"></span></div>
+        <span class="quiz-modal__progress-text">Шаг 1 из 5</span>
+      </div>
+      <form id="quizForm" class="quiz-form" novalidate>
+        <div class="quiz-step is-active" data-step="1">
+          <p class="quiz-step__label">Тип мероприятия</p>
+          <div class="quiz-options quiz-options--grid">
+            <label class="quiz-option"><input type="radio" name="event_type" value="conference" required><span>Конференция</span></label>
+            <label class="quiz-option"><input type="radio" name="event_type" value="concert"><span>Концерт</span></label>
+            <label class="quiz-option"><input type="radio" name="event_type" value="corporate"><span>Корпоратив</span></label>
+            <label class="quiz-option"><input type="radio" name="event_type" value="exhibition"><span>Выставка</span></label>
+            <label class="quiz-option"><input type="radio" name="event_type" value="wedding"><span>Свадьба / частное</span></label>
+            <label class="quiz-option"><input type="radio" name="event_type" value="other"><span>Другое</span></label>
+          </div>
+        </div>
+        <div class="quiz-step" data-step="2" hidden>
+          <p class="quiz-step__label">Что нужно <span class="quiz-step__hint">можно несколько</span></p>
+          <div class="quiz-options quiz-options--grid">
+            <label class="quiz-option quiz-option--check"><input type="checkbox" name="services[]" value="led"><span>LED-экран</span></label>
+            <label class="quiz-option quiz-option--check"><input type="checkbox" name="services[]" value="sound"><span>Звук</span></label>
+            <label class="quiz-option quiz-option--check"><input type="checkbox" name="services[]" value="light"><span>Свет</span></label>
+            <label class="quiz-option quiz-option--check"><input type="checkbox" name="services[]" value="stage"><span>Сцена</span></label>
+            <label class="quiz-option quiz-option--check"><input type="checkbox" name="services[]" value="content"><span>Видеоконтент</span></label>
+            <label class="quiz-option quiz-option--check"><input type="checkbox" name="services[]" value="turnkey"><span>Техпродакшн под ключ</span></label>
+          </div>
+        </div>
+        <div class="quiz-step" data-step="3" hidden>
+          <p class="quiz-step__label">Дата и город</p>
+          <label class="quiz-field">
+            <span>Город</span>
+            <input type="text" id="quizCity" name="city" autocomplete="address-level2" placeholder="Москва" required>
+          </label>
+          <label class="quiz-field">
+            <span>Дата или период</span>
+            <input type="text" id="quizDate" name="event_date" placeholder="15 июня 2026 или 10–12 мая" required>
+          </label>
+        </div>
+        <div class="quiz-step" data-step="4" hidden>
+          <p class="quiz-step__label">Масштаб <span class="quiz-step__hint">можно пропустить</span></p>
+          <label class="quiz-field">
+            <span>Размер экрана или число гостей</span>
+            <input type="text" id="quizScale" name="scale" placeholder="Например: экран 6×3 м или 300 гостей">
+          </label>
+        </div>
+        <div class="quiz-step" data-step="5" hidden>
+          <p class="quiz-step__label">Контакты</p>
+          <label class="quiz-field">
+            <span>Имя</span>
+            <input type="text" id="quizName" name="name" autocomplete="name" required>
+          </label>
+          <label class="quiz-field">
+            <span>Телефон</span>
+            <input type="tel" id="quizPhone" name="phone" inputmode="tel" autocomplete="tel" placeholder="+7 (926) 000-00-00" required>
+          </label>
+          <p class="quiz-step__sub">Удобный способ связи</p>
+          <div class="quiz-options quiz-options--row">
+            <label class="quiz-option"><input type="radio" name="contact_method" value="telegram" required><span>Telegram</span></label>
+            <label class="quiz-option"><input type="radio" name="contact_method" value="max"><span>MAX</span></label>
+            <label class="quiz-option"><input type="radio" name="contact_method" value="phone"><span>Звонок</span></label>
+          </div>
+          <label class="quiz-consent">
+            <input type="checkbox" id="quizConsent" name="consent" required>
+            <span>Согласен с <a href="/privacy.html" target="_blank" rel="noopener">политикой конфиденциальности</a></span>
+          </label>
+          <label class="quiz-hp" aria-hidden="true">
+            <span>Сайт компании</span>
+            <input type="text" id="quizWebsite" name="company_website" tabindex="-1" autocomplete="off">
+          </label>
+        </div>
+        <p class="quiz-modal__error" hidden></p>
+        <div class="quiz-modal__actions">
+          <button type="button" class="btn btn--ghost" data-quiz-action="back" hidden>Назад</button>
+          <button type="button" class="btn btn--ghost-orange" data-quiz-action="skip" hidden>Пропустить</button>
+          <button type="button" class="btn btn--cyan" data-quiz-action="next">Далее</button>
+          <button type="button" class="btn btn--cyan btn--lg" data-quiz-action="submit" hidden>Отправить заявку</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <div class="cookie-bar" id="cookieBar" hidden>
-    <p>Сайт использует cookies и Яндекс Метрику, чтобы считать заявки из рекламы. <a href="privacy.html">Подробнее</a></p>
+    <p>Мы используем cookies, чтобы сайт работал удобнее. Продолжая пользоваться сайтом, вы соглашаетесь с <a href="/privacy.html">политикой конфиденциальности</a>.</p>
     <button type="button" class="btn btn--cyan" id="cookieOk">Понятно</button>
   </div>
 
-  <!-- Marquiz script start -->
-  <script>
-  (function(w, d, s, o){
-    var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';j.onload = function() {
-      if (document.readyState !== 'loading') Marquiz.init(o);
-      else document.addEventListener("DOMContentLoaded", function() {
-        Marquiz.init(o);
-      });
-    };
-    d.head.insertBefore(j, d.head.firstElementChild);
-  })(window, document, 'script', {
-      host: '//quiz.marquiz.ru',
-      region: 'ru',
-      id: '68663cff9e2f3a0019760c73',
-      autoOpen: false,
-      autoOpenFreq: 'once',
-      openOnExit: false,
-      disableOnMobile: false
-    }
-  );
-  </script>
-  <!-- Marquiz script end -->
-
-  <script src="js/site-config.js?v=3"></script>
-  <script src="js/analytics.js?v=3"></script>
+  <script src="js/site-config.js?v=4"></script>
+  <script src="js/analytics.js?v=4"></script>
   <script src="js/catalog.js?v=r9"></script>
-  <script src="js/main.js?v=r13"></script>
+  <script src="js/quiz.js?v=1"></script>
+  <script src="js/main.js?v=r15"></script>
 </body>
 </html>

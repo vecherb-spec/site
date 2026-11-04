@@ -4,8 +4,19 @@ const navMobile = document.getElementById("navMobile");
 const catalogGrid = document.getElementById("catalogGrid");
 const year = document.getElementById("year");
 const siteConfig = window.SITE || {};
-const marquizId = siteConfig.marquizId || "68663cff9e2f3a0019760c73";
 const maxUrl = siteConfig.maxUrl || "https://max.ru/u/f9LHodD0cOKuWxN5EAXtxBujEQQCTNaNx9SSYtsJjp6ZBHkkSsSqgNm191s";
+
+if (new URLSearchParams(window.location.search).get("hero") === "alt") {
+  document.getElementById("top")?.classList.add("hero--alt-photo");
+}
+
+document.querySelectorAll(".card__bg img[data-fallback]").forEach((img) => {
+  img.addEventListener("error", () => {
+    if (img.dataset.fbf || !img.dataset.fallback) return;
+    img.dataset.fbf = "1";
+    img.src = img.dataset.fallback;
+  }, { once: true });
+});
 
 if (year) year.textContent = String(new Date().getFullYear());
 
@@ -34,7 +45,7 @@ burger?.addEventListener("click", () => {
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     const id = link.getAttribute("href");
-    if (!id || id.startsWith("#popup:")) return;
+    if (!id || id === "#quiz") return;
     const target = document.querySelector(id);
     if (!target) return;
     event.preventDefault();
@@ -42,43 +53,6 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     target.scrollIntoView({ behavior: "smooth" });
   });
 });
-
-/**
- * Marquiz binds only links that exist at init. Catalog tabs replace innerHTML,
- * so new «Запросить цену» buttons have no listeners. Capture-phase delegation
- * opens the quiz on every tab and every button, including after tab switches.
- */
-function openMarquiz(id) {
-  if (window.Marquiz && typeof window.Marquiz.showModal === "function") {
-    window.Marquiz.showModal(id);
-    return;
-  }
-  let n = 0;
-  const t = setInterval(() => {
-    n += 1;
-    if (window.Marquiz && typeof window.Marquiz.showModal === "function") {
-      window.Marquiz.showModal(id);
-      clearInterval(t);
-    } else if (n > 50) {
-      clearInterval(t);
-    }
-  }, 100);
-}
-
-document.addEventListener(
-  "click",
-  (event) => {
-    const link = event.target.closest && event.target.closest('a[href^="#popup:marquiz_"]');
-    if (!link) return;
-    event.preventDefault();
-    event.stopPropagation();
-    const href = link.getAttribute("href") || "";
-    const id = href.replace(/^#popup:marquiz_/, "") || marquizId;
-    if (!id) return;
-    openMarquiz(id);
-  },
-  true
-);
 
 const renderCatalog = (id) => {
   const group = (window.CATALOG || []).find((item) => item.id === id);
@@ -93,7 +67,7 @@ const renderCatalog = (id) => {
         </div>
         <h3>${item.name}</h3>
         <p>${item.spec}</p>
-        <a href="#popup:marquiz_${marquizId}">Запросить цену <span aria-hidden="true">→</span></a>
+        <a href="#quiz">Запросить цену <span aria-hidden="true">→</span></a>
       </article>`
     )
     .join("");

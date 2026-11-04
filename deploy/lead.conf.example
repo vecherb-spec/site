@@ -1,0 +1,17 @@
+; Скопируйте на сервер: sudo install -o root -g www-data -m 640 deploy/lead.conf.example /etc/medialive/lead.conf
+; Файл вне webroot. Секреты в репозиторий не коммитьте.
+
+; --- Основной канал: Radist → Telegram-чат «Заявки LED» ---
+; URL API Radist (базовый адрес, без хардкода в коде).
+radist_api_url=https://api.radist.example/v1
+radist_api_key=your_radist_api_key
+; ID подключения / чата в Radist (чат «Заявки LED»).
+radist_chat_id=your_connection_or_chat_id
+
+; --- Запасной канал: Telegram Bot API (необязательно) ---
+; telegram_bot_token=
+; telegram_chat_id=
+
+; --- Необязательно ---
+; log_file=/var/log/medialive/leads.log
+; rate_dir=/var/lib/medialive/rate-limit
