@@ -6,6 +6,18 @@ const year = document.getElementById("year");
 const siteConfig = window.SITE || {};
 const maxUrl = siteConfig.maxUrl || "https://max.ru/u/f9LHodD0cOKuWxN5EAXtxBujEQQCTNaNx9SSYtsJjp6ZBHkkSsSqgNm191s";
 
+if (new URLSearchParams(window.location.search).get("hero") === "alt") {
+  document.getElementById("top")?.classList.add("hero--alt-photo");
+}
+
+document.querySelectorAll(".card__bg img[data-fallback]").forEach((img) => {
+  img.addEventListener("error", () => {
+    if (img.dataset.fbf || !img.dataset.fallback) return;
+    img.dataset.fbf = "1";
+    img.src = img.dataset.fallback;
+  }, { once: true });
+});
+
 if (year) year.textContent = String(new Date().getFullYear());
 
 document.querySelectorAll('[data-contact="max"]').forEach((link) => {

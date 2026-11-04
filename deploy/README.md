@@ -77,6 +77,16 @@ sudo rsync -a --delete \
 
 Или скрипт `deploy/setup-vps.sh` для первичной настройки (без PHP — установите FPM отдельно, см. выше).
 
+## Фото hero и услуг
+
+Исходники кладите в `uploads/` (JPEG до 1920 px). Варианты WebP/JPEG (`480w`–`1920w`) генерируются скриптом:
+
+```bash
+python3 deploy/process-site-photos.py
+```
+
+Файлы попадают в `img/hero/` и `img/services/`. Запасной кадр первого экрана: `?hero=alt` (второй hero). Запасное фото карточки персонала: `service-staff-alt-*`.
+
 ## Антиспам и валидация
 
 - Скрытое поле honeypot (`company_website`) — ботам отдаётся фиктивный успех.
