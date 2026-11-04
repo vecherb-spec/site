@@ -20,14 +20,8 @@
     window.trackGoal(goalLink.getAttribute("data-goal"));
   });
 
-  document.addEventListener("marquiz-finish", (event) => {
-    const marquizId = window.SITE && window.SITE.marquizId;
-    const quizId = event.detail && event.detail.quizId;
-    if (marquizId && quizId && String(quizId) !== String(marquizId)) return;
-    window.trackGoal("quiz_submit", {
-      source: "marquiz",
-      quizId: quizId || marquizId || undefined,
-    });
+  document.addEventListener("medialive-quiz-submit", () => {
+    window.trackGoal("quiz_submit", { source: "medialive_quiz" });
   });
 
   if (!id) return;
