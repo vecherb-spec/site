@@ -590,9 +590,13 @@ button {
   backdrop-filter: blur(4px);
 }
 
-.card--photo h3,
-.card--photo p {
+.card--photo .card__content p,
+.card--photo .card__content .tags span {
   text-shadow: 0 1px 12px rgb(0 0 0 / 0.45);
+}
+
+.card--photo .card__content h3 {
+  text-shadow: 0 2px 18px rgb(0 0 0 / 0.35);
 }
 
 .card--photo .tags {
@@ -640,18 +644,27 @@ button {
 }
 
 .card h3,
-.feature h3 {
+.feature h3,
+.services .card--photo .card__content h3 {
   font-family: var(--display);
   font-size: 1.7rem;
+  font-weight: 400;
   letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.05;
   margin-bottom: 12px;
 }
 
 .card p,
 .feature p,
+.services .card--photo .card__content p,
 .equip p {
-  color: var(--muted);
+  font-family: var(--body);
   font-size: 0.92rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
 .tags {
@@ -662,9 +675,11 @@ button {
 }
 
 .tags span {
+  font-family: var(--body);
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.03em;
+  text-transform: none;
   padding: 4px 10px;
   border-radius: 2px;
   border: 1px solid rgb(0 201 255 / 0.2);
@@ -1088,8 +1103,10 @@ button {
   }
 
   .card h3,
-  .feature h3 {
+  .feature h3,
+  .services .card--photo .card__content h3 {
     font-size: clamp(1.05rem, 4.8vw, 1.45rem);
+    letter-spacing: 0.04em;
   }
 
   .tabs {
